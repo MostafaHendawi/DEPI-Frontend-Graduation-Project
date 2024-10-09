@@ -1,2 +1,2 @@
 # DEPI-Frontend-Graduation-Project
-E Commerce
+Restaurant Management System
