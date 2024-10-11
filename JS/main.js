@@ -261,3 +261,64 @@ function rememberYou() {
 }
 
 //* ////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+                  /*        START   exploreMenus  SCRIPT             */
+
+var myImgs = Array.from(document.querySelectorAll(".item img"));
+ var nextElement = document.querySelector("#nextElement");
+var previousElement = document.querySelector("#previousElement");
+var cardTitle = document.querySelectorAll(".imagesSlider h4");
+var cardText = document.querySelectorAll(".cardText");
+                  
+                  
+let arr = [4, 3, 2, 1, 0];
+let card4 = document.querySelector(".card4").innerHTML;
+let card3 = document.querySelector(".card3").innerHTML;
+let card2 = document.querySelector(".card2").innerHTML;
+let card1 = document.querySelector(".card1").innerHTML;
+let card0 = document.querySelector(".card0").innerHTML;
+                  
+                  
+                  
+nextElement.addEventListener("click", showNextElement);
+previousElement.addEventListener("click", showPreviousElement);
+                  
+// 4 3 2 1 0  cards in html
+//   2 1 0 4 3  imgs
+let paragraphs = [`${card4}`,`${card3}` ,`${card2}` ,`${card1}` ,`${card0}` ];
+let h4 = ["4", "3", "2", "1", "0"];
+                  
+                  
+                  
+function showNextElement() {
+arr.push(arr.shift());
+paragraphs.push(paragraphs.shift());
+h4.push(h4.shift());
+for (let index = 4; index >= 0; index--) {
+    myImgs[arr[index]].setAttribute("src", `./Assets/meal-${index}.jpg`);
+    cardText[index].innerHTML = paragraphs[index];
+    cardTitle[index].innerHTML = h4[index];
+  }
+}
+                  
+// 4 3 2 1 0  cards in html
+//  3 2 1 0 4 right
+//  left
+                  
+function showPreviousElement() {
+   arr.unshift(arr.pop());
+   paragraphs.unshift(paragraphs.pop());
+   h4.unshift(h4.pop());
+                  
+    for (let index = 4; index >= 0; index--) {
+       myImgs[arr[index]].setAttribute("src", `./Assets/meal-${index}.jpg`);
+       cardText[index].innerHTML = paragraphs[index];
+       cardTitle[index].innerHTML = h4[index];
+       }
+ }
+                                          /*          END   exploreMenus  SCRIPT                  */
