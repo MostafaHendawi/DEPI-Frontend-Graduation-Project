@@ -1,230 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+<body>
+<div class="register">
+    <div class="container-fluid " >
+        <div class="row align-items-center ">
+            <div class="col col-12 col-lg-7 ">
+                <form class="p-4" id="registerForm">
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+                    <h1 class="p-3 text-center mb-5 mainTitle"><i class="fa-solid fa-utensils"></i> Savory</h1>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <a href="#" class="logo"><i class="fas fa-utensils"></i> 3MSAO.</a>
-      <nav class="navbar">
-        <div class="dropdown">
-            <a href="#">menu <i class="fas fa-caret-down"></i></a>
-            <div class="dropdown-content">
-              <a href="#">Italian</a>
-              <a href="#">Japanese</a>
-              <a href="#">Mexico</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <a href="#">resp <i class="fas fa-caret-down"></i></a>
-            <div class="dropdown-content">
-              <a href="#">Option 1</a>
-              <a href="#">Option 2</a>
-              <a href="#">Option 3</a>
-            </div>
-          </div>
-        <a href="">contacy</a>
-        <a href="">about</a>
-        <a href="">serve</a>
-      </nav>
-      <div class="icons">
+                    <div class=" mb-3">
+                        <label for="fName" class="form-label">First Name</label>
+                        <input id="fName" name="fName" type="text" class="form-control" placeholder="Ahmed" >
+                        <div class="">
+                          </div>
+                    </div>
 
-        <i class="fas fa-bars" id="menu-bars"></i>
-        <a href="#" class="fas fa-phone"></a><span style="color: #ffffff; margin: 1rem;font-size: 2rem;font-weight: 600;">+01234567891</span>
-        <i class="fas fa-search" id="search-icon"></i>
-        
-        <a href="#" class="fas fa-solid fa-bag-shopping"></a>
-      </div>
-    </header>
 
-    <!-- ===================================================================================== -->
-    <form action="" id="search-form">
-      <input type="search" name="" id="search-box" placeholder="search here" />
-      <label for="search-box" class="fas fa-search"></label
-      ><i class="fas fa-times" id="close"></i>
-    </form>
-    <!--======================================================================================== -->
-    <section class="home" id="home">
-      <div class="swiper mySwiper home-slider">
-        <div class="swiper-wrapper wrapper">
-          <div class="swiper-slide slider">
-            <div class="content">
-              
-              
-              <h3>Your Ultimate</h3>
-              <h3><span style="font-size: 6rem; color: #aea91d;">food </span> Destination</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                nam quia magni.
-              </p>
-              <a href="" class="btn">Buy Now</a>
-              <i class="fa-solid fa-play"></i>
-              <span class="How">How to Order</span>
-              <div class="twestatic">
-                <div class="statistic">
-                  <strong style="font-size: 4rem">20K+</strong>
-                  <div style="font-size: 1rem; color: #7c7676">Happy Customers</div>
-                </div>
-                <div class="">
-                  <!-- Use col-auto for width adjustment -->
-                  <div
-                    style="border-left: 1px solid #707473; height: 100%"
-                  ></div>
-                  <!-- Reduced margin -->
-                </div>
-                <div class="statistic">
-                  <strong style="font-size: 4rem">700+</strong>
-                  <div style="font-size: 1rem; color: #7c7676;">Types of Food</div>
-                </div>
-              </div>
-            </div>
-            <div class="rt-imege">
-              <div class="image">
-                <img
-                  src="view-delicious-burger-with-buns-cheese.jpg"
-                  alt=""
-                  srcset=""
-                  height="300px"
-                  width="300px"
-                  style="border-radius: 50%"
-                />
-                <div class="rt-icons">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                  </div>
-              </div>
-              
-            </div>
-          </div>
-          <div class="swiper-slide slider">
-            <div class="content">
-              
-                <h3>Your Ultimate</h3>
-                <h3><span style="font-size: 6rem; color: #aea91d;">food</span> Destination</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                nam quia magni.
-              </p>
-              <a href="" class="btn">Buy Now</a>
-              <i class="fa-solid fa-play rounded-circle"></i>
-              <span class="How">How to Order</span>
-              <div class="twestatic">
-                <div class="statistic">
-                  <strong style="font-size: 4rem">20K+</strong>
-                  <div style="font-size: 1rem; color: #7c7676">Happy Customers</div>
-                </div>
-                <div class="">
-                  <!-- Use col-auto for width adjustment -->
-                  <div
-                    style="border-left: 1px solid #707473; height: 80%"
-                  ></div>
-                  <!-- Reduced margin -->
-                </div>
-                <div class="statistic">
-                  <strong style="font-size: 4rem">700+</strong>
-                  <div style="font-size: 1rem; color: #7c7676">Types of Food</div>
-                </div>
-              </div>
-            </div>
-            <div class="rt-imege">
-              <div class="image">
-                <img
-                  src="flat-lay-salad-with-chicken-sesame-seeds.jpg"
-                  alt=""
-                  srcset=""
-                  height="300px"
-                  width="300px"
-                  style="border-radius: 50%"
-                />
-                <div class="rt-icons">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                  </div>
-              </div>
-              
-            </div>
-          </div>
-          <div class="swiper-slide slider">
-            <div class="content">
-              
-                <h3>Your Ultimate</h3>
-                <h3><span style="font-size: 6rem; color: #aea91d;">food</span> Destination</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                nam quia magni.
-              </p>
-              <a href="" class="btn">Buy Now</a>
-              <i class="fa-solid fa-play "></i>
-              <span class="How">How to Order</span>
-              <div class="twestatic">
-                <div class="statistic">
-                  <strong style="font-size: 4rem">20K+</strong>
-                  <div style="font-size: 1rem; color: #7c7676">Happy Customers</div>
-                </div>
-                <div class="">
-                  <!-- Use col-auto for width adjustment -->
-                  <div
-                    style="border-left: 1px solid #707473; height: 80%"
-                  ></div>
-                  <!-- Reduced margin -->
-                </div>
-                <div class="statistic">
-                  <strong style="font-size: 4rem">700+</strong>
-                  <div style="font-size: 1rem; color: #7c7676">Types of Food</div>
-                </div>
-              </div>
-            </div>
-            <div class="rt-imege">
-              <div class="image">
-                <img
-                  src="delicious-pasta-plate.jpg"
-                  alt=""
-                  srcset=""
-                  height="300px"
-                  width="300px"
-                  style="border-radius: 50%"
-                />
-                <div class="rt-icons">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-              </div>
-              </div>
+                      <div class="mb-3">
+                        <label for="lName" class="form-label">Last Name</label>
+                        <input id="lName" name="lName" type="text" class="form-control " placeholder="Ali"  >
+                        <div class="">
+                          </div>
+                      </div>
+ 
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-group mb-3">
+                          <span class="input-group-text"><i class="fa-regular fa-envelope"></i></span>
+                          <input name="email" id="email" type="text" class="form-control" placeholder="ahmed_ali@gmail.com" >
+                          <div class="">
+                        </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input id="phone" name="phone" type="tel" class="form-control" placeholder="01234567891" >
+                        <div class="">
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-group mb-3">
+                          <span class="input-group-text"><i class="fa-regular fa-eye-slash"></i></span>
+                          <input id="password" name="password" type="password" class="form-control" placeholder="********" >
+                          <div class="">
+                        </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Cpassword" class="form-label">Confirm Password</label>
+                        <div class="input-group mb-3">
+                          <span class="input-group-text"><i class="fa-regular fa-eye-slash"></i></span>
+                          <input id="Cpassword" name="rePassword" type="password" class="form-control" placeholder="********" >
+                          <div class="">
+                        </div>
+                        </div>
+                    </div>
+                   
+
+                    <button type="submit" class="btn form-control registerBtn">Register</button>
+
+                    <p class="text-center mt-2">Already have an account? <a style="color:var(--main-color)" href="login.html">Login</a></p>
+                  </form>
             </div>
 
-          </div>
-          
+            <div class="col col-lg-5 ">
+                <div class=" img-fluid d-none d-lg-block float-end">
+                    <img class="vh-100" src="Assets/login.jpg" alt="food">
+                </div>
+            </div>
+
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
+    </div>
+</div>
 
 
-    </section>
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="Assets/hi.png" class="rounded me-2" width="30" heigth="30" alt="welcome">
+      <strong class="me-auto">Savory</strong>
+      <small>1 second ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body text-white"  style="background-color: var(--main-color);">
+      Welcome to savory world.
+    </div>
+  </div>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="main.js"></script>
-  </body>
+
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+
 </html>
