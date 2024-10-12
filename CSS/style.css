@@ -222,7 +222,248 @@ nav {
 .home .btn:hover {
   background-color: #427000;
 }
+/* ****************Home=> reservation & reviews & footer *************** */
 
+.reservation-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.reservation-image {
+  flex: 1;
+  background-image: url('../Assets/reservation-img.png');
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 600px;
+  border-radius: 20px;
+}
+
+.reservation-form {
+  flex: 1;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reservation-form h2 {
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.reservation-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.reservation-form .btn {
+  background-color: #76c043;
+  color: white;
+  margin-top: auto;
+  border-radius: 20px;
+}
+
+.form-control {
+  border-radius: 20px;
+}
+
+
+
+/* review-section  */
+
+
+.review-section {
+  background-color: #243d02;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  border-radius: 10px;
+  position: relative;
+  margin: 50px auto;
+  max-width: 1050px;
+}
+.review-image {
+  flex: 1;
+  background-image: url('../Assets/review-img.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.review-content {
+  flex: 2;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius:10px 10px 10px 80px;
+}
+.review-content h2 {
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+}
+.review-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+.review-content .reviewer {
+  display: flex;
+  align-items: center;
+}
+.review-content .reviewer img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+.review-content .reviewer .name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.review-content .reviewer .title {
+  font-size: 1rem;
+}
+.review-content .stars {
+  color: #f4a261;
+  margin-bottom: 10px;
+}
+.background-decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://via.placeholder.com/600x400');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  opacity: 0.1;
+  border-radius: 10px;
+}
+
+.features {
+  padding: 50px 0;
+  text-align: center;
+}
+.features .feature-box {
+  padding: 20px;
+}
+.features .feature-box img {
+  width: 50px;
+  margin-bottom: 20px;
+}
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 50px 0;
+}
+.footer .social-icons img {
+  width: 30px;
+  margin-right: 10px;
+}
+.footer .contact-info, .footer .links, .footer .subscribe {
+  margin-bottom: 30px;
+}
+.footer .contact-info a {
+  color: white;
+  text-decoration: none;
+}
+.footer .links a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+.footer .subscribe input[type="email"] {
+  border: none;
+  padding: 10px;
+  width: 80%;
+  border-radius:10px 0px 0px 10px ;
+
+}
+.footer .subscribe button {
+  border: none;
+  padding: 10px;
+  background-color: #6c757d;
+  color: white;
+  border-radius:0px 10px 10px 0px ;
+  background-color: #76c043;
+  margin-left: -5px;
+
+}
+.social-icons a{
+  text-decoration: none;
+  color: #76c043;
+  margin-left: 10px;
+}
+
+.features .feature-box h1{
+  text-decoration: none;
+  color: #76c043;
+}
+
+.logo{
+  margin-left: -80px;
+  margin-top: -50px;
+  width: 300px;
+}
+.copyright{
+  text-align: center;
+  margin-top: 40px;
+}
+.linee{
+  color: #f8f9fa;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .review-image{
+      display: none;
+  }
+  .reservation-section {
+      flex-direction: column;
+  }
+
+  .reservation-image, .reservation-form {
+      width: 100%;
+      height: auto;
+  }
+
+  .reservation-image {
+      height: 300px;
+      margin-bottom: 20px;
+  }
+
+  .reservation-form {
+      padding: 20px;
+      box-shadow: none;
+  }
+
+  .reservation-form h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+  }
+
+  .form-row {
+      flex-direction: column;
+  }
+
+  .form-group {
+      width: 100%;
+  }
+}
 
 /********************************** Menus ****************************/
 
