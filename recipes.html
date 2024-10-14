@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Savory</title>
+        <link rel="shortcut icon" href="Assets/logo.png" type="image/x-icon">
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+        <link rel="stylesheet" href="./CSS/style.css" />
+      </head>
+
+
+      <body>
+        
+
+
+
+<section class="recipes container-fluid">
+    <div class="d-flex title">
+        <h2>Recipes</h2>
+        <i class="fa-solid fa-utensils fa-2xl pt-3 ps-2 mb-5" style="color: #ffe600;"></i>    
+    </div>
+    <div class="description d-sm-flex  justify-content-between mt-5 mb-3 ">
+        <h4 class="pt-2">Best Seller</h4>
+         <input 
+              type="text"
+              id="searchInput"
+              placeholder=" Search here"
+              class="form-control mb-2 pb-2  "
+            />
+        
+    </div>
+    <div class="row g-3 mb-4" id="cardsRow">
+            <div class="col-md-6 col-xl-3 col-sm-6">
+              <div class="cards card1 position-relative">
+                <img
+                  src="./Assets/chefs-1.jpg"
+                  alt=""
+                  class="w-50 rounded-circle ms-3 mt-3"
+                />
+                <h5 class="ps-4 pt-4 pe-2">Tacos </h5>
+                <p class="ps-4 pt-2 pe-2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+                  quasi.
+                </p>
+                <div class="d-flex justify-content-between">
+                  <b class="ps-4 pt-2">$9.98</b>
+                  <button class="btn btn-light me-3 mb-2 text-success">
+                    <i class="fa-solid fa-plus"></i>
+                    Add
+                  </button>
+                </div>
+                <div class="icon position-absolute top-0 end-0 m-3">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+            </div>
+
+
+
+    
+            <div class="col-md-6 col-xl-3 col-sm-6">
+              <div class="cards card2 position-relative">
+                <img
+                  src="./Assets/chefs-2.jpg"
+                  alt=""
+                  class="w-50 rounded-circle ms-3 mt-3"
+                />
+                <h5 class="ps-4 pt-4 pe-2">Steak </h5>
+                <p class="ps-4 pt-2 pe-2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+                  quasi.
+                </p>
+                <div class="d-flex justify-content-between">
+                  <b class="ps-4 pt-2">$6.88</b>
+                  <button class="btn btn-light me-3 mb-2 text-success">
+                    <i class="fa-solid fa-plus"></i>
+                    Add
+                  </button>
+                </div>
+                <div class="icon position-absolute top-0 end-0 m-3">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+            </div>
+
+
+    
+            <div class="col-md-6 col-xl-3 col-sm-6">
+              <div class="cards card3 position-relative">
+                <img
+                  src="./Assets/chefs-3.jpg"
+                  alt=""
+                  class="w-50 rounded-circle ms-3 mt-3"
+                />
+                <h5 class="ps-4 pt-4 pe-2">Sushi </h5>
+                <p class="ps-4 pt-2 pe-2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+                  quasi.
+                </p>
+                <div class="d-flex justify-content-between">
+                  <b class="ps-4 pt-2">$12.91</b>
+                  <button class="btn btn-light me-3 mb-2 text-success">
+                    <i class="fa-solid fa-plus"></i>
+                    Add
+                  </button>
+                </div>
+                <div class="icon position-absolute top-0 end-0 m-3">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+            </div>
+            
+    
+            <div class="col-md-6 col-xl-3 col-sm-6">
+              <div class="cards card4 position-relative">
+                <img
+                  src="./Assets/favicon.png"
+                  alt=""
+                  class="w-50 rounded-circle ms-3 mt-3"
+                />
+                <h5 class="ps-4 pt-4 pe-2">Pasta</h5>
+                <p class="ps-4 pt-2 pe-2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+                  quasi.
+                </p>
+                <div class="d-flex justify-content-between">
+                  <b class="ps-4 pt-2">$6.90</b>
+                  <button class="btn btn-light me-3 mb-2 text-success">
+                    <i class="fa-solid fa-plus"></i>
+                    Add
+                  </button>
+                </div>
+                <div class="icon position-absolute top-0 end-0 m-3">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-6 col-xl-3 col-sm-6">
+                <div class="cards card1 position-relative">
+                  <img
+                    src="./Assets/chefs-1.jpg"
+                    alt=""
+                    class="w-50 rounded-circle ms-3 mt-3"
+                  />
+                  <h5 class="ps-4 pt-4 pe-2">Barbecue Ribs</h5>
+                  <p class="ps-4 pt-2 pe-2">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+                    quasi.
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <b class="ps-4 pt-2">$9.98</b>
+                    <button class="btn btn-light me-3 mb-2 text-success">
+                      <i class="fa-solid fa-plus"></i>
+                      Add
+                    </button>
+                  </div>
+                  <div class="icon position-absolute top-0 end-0 m-3">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-6 col-xl-3 col-sm-6">
+                <div class="cards card2 position-relative">
+                  <img
+                    src="./Assets/chefs-2.jpg"
+                    alt=""
+                    class="w-50 rounded-circle ms-3 mt-3"
+                  />
+                  <h5 class="ps-4 pt-4 pe-2">Paella </h5>
+                  <p class="ps-4 pt-2 pe-2">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+                    quasi.
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <b class="ps-4 pt-2">$6.88</b>
+                    <button class="btn btn-light me-3 mb-2 text-success">
+                      <i class="fa-solid fa-plus"></i>
+                      Add
+                    </button>
+                  </div>
+                  <div class="icon position-absolute top-0 end-0 m-3">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-6 col-xl-3 col-sm-6">
+                <div class="cards card3 position-relative">
+                  <img
+                    src="./Assets/chefs-3.jpg"
+                    alt=""
+                    class="w-50 rounded-circle ms-3 mt-3"
+                  />
+                  <h5 class="ps-4 pt-4 pe-2">Falafel </h5>
+                  <p class="ps-4 pt-2 pe-2">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+                    quasi.
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <b class="ps-4 pt-2">$12.91</b>
+                    <button class="btn btn-light me-3 mb-2 text-success">
+                      <i class="fa-solid fa-plus"></i>
+                      Add
+                    </button>
+                  </div>
+                  <div class="icon position-absolute top-0 end-0 m-3">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-6 col-xl-3 col-sm-6">
+                <div class="cards card4 position-relative">
+                  <img
+                    src="./Assets/favicon.png"
+                    alt=""
+                    class="w-50 rounded-circle ms-3 mt-3"
+                  />
+                  <h5 class="ps-4 pt-4 pe-2">Fish and Chips</h5>
+                  <p class="ps-4 pt-2 pe-2">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+                    quasi.
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <b class="ps-4 pt-2">$6.90</b>
+                    <button class="btn btn-light me-3 mb-2 text-success">
+                      <i class="fa-solid fa-plus"></i>
+                      Add
+                    </button>
+                  </div>
+                  <div class="icon position-absolute top-0 end-0 m-3">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-6 col-xl-3 col-sm-6">
+                <div class="cards card1 position-relative">
+                  <img
+                    src="./Assets/chefs-1.jpg"
+                    alt=""
+                    class="w-50 rounded-circle ms-3 mt-3"
+                  />
+                  <h5 class="ps-4 pt-4 pe-2"> Pizza</h5>
+                  <p class="ps-4 pt-2 pe-2">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+                    quasi.
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <b class="ps-4 pt-2">$9.98</b>
+                    <button class="btn btn-light me-3 mb-2 text-success">
+                      <i class="fa-solid fa-plus"></i>
+                      Add
+                    </button>
+                  </div>
+                  <div class="icon position-absolute top-0 end-0 m-3">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-6 col-xl-3 col-sm-6">
+                <div class="cards card2 position-relative">
+                  <img
+                    src="./Assets/chefs-2.jpg"
+                    alt=""
+                    class="w-50 rounded-circle ms-3 mt-3"
+                  />
+                  <h5 class="ps-4 pt-4 pe-2">Burgers</h5>
+                  <p class="ps-4 pt-2 pe-2">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+                    quasi.
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <b class="ps-4 pt-2">$6.88</b>
+                    <button class="btn btn-light me-3 mb-2 text-success">
+                      <i class="fa-solid fa-plus"></i>
+                      Add
+                    </button>
+                  </div>
+                  <div class="icon position-absolute top-0 end-0 m-3">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-6 col-xl-3 col-sm-6">
+                <div class="cards card3 position-relative">
+                  <img
+                    src="./Assets/chefs-3.jpg"
+                    alt=""
+                    class="w-50 rounded-circle ms-3 mt-3"
+                  />
+                  <h5 class="ps-4 pt-4 pe-2">Ramen </h5>
+                  <p class="ps-4 pt-2 pe-2">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+                    quasi.
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <b class="ps-4 pt-2">$12.91</b>
+                    <button class="btn btn-light me-3 mb-2 text-success">
+                      <i class="fa-solid fa-plus"></i>
+                      Add
+                    </button>
+                  </div>
+                  <div class="icon position-absolute top-0 end-0 m-3">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xl-3 col-sm-6">
+                <div class="cards card4 position-relative">
+                  <img
+                    src="./Assets/favicon.png"
+                    alt=""
+                    class="w-50 rounded-circle ms-3 mt-3"
+                  />
+                  <h5 class="ps-4 pt-4 pe-2">Barbecue Ribs</h5>
+                  <p class="ps-4 pt-2 pe-2">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+                    quasi.
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <b class="ps-4 pt-2">$6.90</b>
+                    <button class="btn btn-light me-3 mb-2 text-success">
+                      <i class="fa-solid fa-plus"></i>
+                      Add
+                    </button>
+                  </div>
+                  <div class="icon position-absolute top-0 end-0 m-3">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+
+
+
+    </div>
+
+
+</section>
+        
+<script>
+    document.getElementById('searchInput').addEventListener('input', function() {
+        let filter = this.value.toLowerCase();
+        console.log(filter);
+        
+    
+        let cards = document.querySelectorAll('#cardsRow .col-md-6');
+        
+        cards.forEach(function(card) {
+            let title = card.querySelector('h5').textContent.toLowerCase();
+            
+            if (title.startsWith(filter)) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+
+      </body>
+</html>
