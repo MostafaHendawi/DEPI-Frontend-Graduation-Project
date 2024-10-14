@@ -37,7 +37,10 @@
     />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<!-- sweper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+ <!--  -->
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
@@ -294,6 +297,137 @@
           </div>
         </section>
         <!-- END   exploreMenus  SECTION  -->
+         <!--  start Featured Resipes section-->
+           <div class="featureresioes">
+         <div class="container mt-5 ">
+          <div class="swiper row">
+              <div class="header-container">
+                  <h2 class="title"><span class="fontfeatured">Featured</span> Resipes</h2>
+                  <div class="icon-buttons">
+                    <div class="swiper-button-prevv">
+                      <i class="fa-solid fa-circle-chevron-left fa-xl"></i>
+                    </div>
+                    <div class="swiper-button-nextt">
+                        <i class="fa-solid fa-circle-chevron-right fa-xl" ></i>
+                    </div>
+                  </div>
+              </div>
+              <div class="swiper-wrapper  ">
+                  <div class="swiper-slide col-md-6 col-lg-4 md-5">
+                  <div class="card">
+                      <img src="Assets/r1.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;">
+                      <div class="showcase-badge angle"> New</div>
+                      <button class="btn-action" onclick="toggleHeart(this)">
+                          <i class="fa-solid fa-heart fa-xl icon"></i>
+                      </button>
+                      <div class="card-body">
+                          <p class="card-text">Classic Margherita Pizza</p>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="swiper-slide col-md-6 col-lg-4 md-5">
+            <div class="card">
+              <img src="Assets/r2.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;">
+              <div class="showcase-badge angle"> New</div>
+              <button class="btn-action" onclick="toggleHeart(this)">
+                  <i class="fa-solid fa-heart fa-xl icon"></i>
+                </button>
+                  <div class="card-body">
+                      <p class="card-text">Classic Margherita Pizza</p>
+                  </div>
+            </div>
+                  </div>
+                  <div class="swiper-slide col-md-6 col-lg-4 md-5">
+            <div class="card">
+              <img src="Assets/r3.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;height: 16rem;">
+              <div class="showcase-badge angle"> New</div>
+              <button class="btn-action" onclick="toggleHeart(this)">
+                  <i class="fa-solid fa-heart fa-xl icon"></i>
+                </button>
+                  <div class="card-body">
+      
+                      <p class="card-text">Classic Margherita Pizza</p>
+                  </div>
+            </div>
+                  </div>
+                  <div class="swiper-slide col-md-6 col-lg-4 md-5">
+            <div class="card">
+              <img src="Assets/r4.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;">
+              <div class="showcase-badge angle"> New</div>
+              <button class="btn-action " onclick="toggleHeart(this)">
+                  <i class="fa-solid fa-heart fa-xl icon"></i>
+                </button>
+                  <div class="card-body">
+      
+                      <p class="card-text">Classic Margherita Pizza</p>
+                  </div>
+            </div>
+                  </div>
+                  <div class="swiper-slide col-md-6 col-lg-4 md-5">
+            <div class="card">
+              <img src="Assets/r5.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;height: 16rem;">
+              <div class="showcase-badge angle"> New</div>
+              <button class="btn-action" onclick="toggleHeart(this)">
+                  <i class="fa-solid fa-heart fa-xl icon"></i>
+                </button>
+                  <div class="card-body">
+      
+                      <p class="card-text">Classic Margherita Pizza</p>
+                  </div>
+            </div>
+                  </div>
+                  <div class="swiper-slide col-md-6 col-lg-4   md-5">
+            <div class="card">
+              <img src="Assets/r6.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;">
+              <div class="showcase-badge angle"> New</div>
+              <button class="btn-action" onclick="toggleHeart(this)">
+                  <i class="fa-solid fa-heart fa-xl icon"></i>
+                </button>
+                  <div class="card-body">
+                      <p class="card-text"> Classic Margherita Pizza</p>
+                  </div>
+            </div>
+                  </div>
+      
+              </div>
+          </div>
+      </div>
+      <div class="container mt-5">
+          <div class="row g-3"> <!-- Apply gap between columns -->
+              <div class="col-md-6">
+                  <div class="card m-4"> <!-- Margin on all sides -->
+                      <div class="card-bodyy position-relative">
+                          <img src="Assets/r6.jpg" class="card-img-top"  alt="Product Image 1" style="border-radius: 10px; opacity: 0.8;">
+                          <div class="showcase-badge angle"> 15% OFF</div>
+                          <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+                            <h2 class="headtex">Great offer for today</h2>
+                            <h2 class="desk">Enjoy a 15% Discount on every</h2>
+                            <h2 class="desk">order of Hakka Noodles</h2>
+                            <h2 class="headtex">Don't Miss Today.</h2>
+                            <button class="btn btn-success ordernow mt-4">Order Now</button>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="card m-4"> <!-- Margin on all sides -->
+                      <div class="card-bodyy position-relative">
+                          <img src="Assets/r2.jpg" class="card-img-top"  alt="Product Image 1" style="border-radius: 10px; opacity: 0.8;">
+                          <div class="showcase-badge angle"> 15% OFF</div>
+                          <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+                            <h2 class="headtex">Great offer for today</h2>
+                            <h2 class="desk">Enjoy a 15% Discount on every</h2>
+                            <h2 class="desk">order of Hakka Noodles</h2>
+                            <h2 class="headtex">Don't Miss Today.</h2>
+                            <button class="btn btn-success ordernow mt-4">Order Now</button>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+         <!--end Featured Resipes section  -->
     <!-- Start reservation & review & footer -->
     <div class="container">
       <div class="reservation-section col-12">
@@ -440,8 +574,37 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     
-    
+    <!-- sweper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!--  -->
     <script src="JS/main.js"></script>
-
+    <script>
+      const swiper = new Swiper('.swiper', {
+        slidesPerView: 1, // Adjust number of cards visible
+        spaceBetween: 30, // Space between slides
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-nextt',
+          prevEl: '.swiper-button-prevv',
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      });
+      </script>
   </body>
 </html>

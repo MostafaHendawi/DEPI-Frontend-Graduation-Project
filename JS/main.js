@@ -321,6 +321,24 @@ function showPreviousElement() {
        cardTitle[index].innerHTML = h4[index];
        }
  }
+//  =============sweper
+function toggleHeart(button) {
+  // Toggle the active class
+  button.classList.toggle('heart-active'); 
+
+  // Check if the heart is active and set the display accordingly
+  if (button.classList.contains('heart-active')) {
+    button.style.display = 'block'; // Show the icon if active
+  } else {
+    button.style.display = 'none'; // Hide the icon if not active
+  }
+}
+
+// ========
+
+
+
+
                                           /*          END   exploreMenus  SCRIPT                  */
 
 
