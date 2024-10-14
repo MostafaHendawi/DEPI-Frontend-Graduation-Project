@@ -595,7 +595,15 @@ nav {
   filter: blur(1px);  */
   width: 75%;
   background-color: #000000;
-  border-radius: 10px;
+  border-radius: 15px;
+}
+.exploreMenus .bg{
+  backdrop-filter: blur(10px); /* Blur effect */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6); /* Shadow effect */
+  background: rgba(0, 0, 0, 0.5); /* Black with opacity */
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
 }
 .exploreMenus .image1{
   z-index:1;
@@ -729,6 +737,51 @@ nav {
 /*                            END   exploreMenus  STYLE                             */
 
 
+
+/*                            START   RECIPES  STYLE                             */
+.recipes .title h2{
+  font-weight: 800;
+}
+.recipes .title i{
+  font-weight: 800;
+  font-size: 40px;
+}
+.recipes .description h4{
+  font-weight: 600;
+}
+.recipes .description input{
+  width: 75%;
+  height: 50px;
+
+}
+@media screen and (max-width: 576px){
+  .recipes .description input{
+    width: 100%;
+
+  }
+}
+.recipes .cards {
+  border: 5px rgb(255, 255, 255) solid;
+  border-radius: 20px;
+}
+.recipes .card1 {
+  background-color: #ffe9f8;
+}
+.recipes .card2 {
+  background-color: #e9ffff;
+}
+.recipes .card3 {
+  background-color: #fff4eb;
+}
+.recipes .card4 {
+  background-color: #f6ffe9;
+}
+.recipes .icon i {
+  font-size: 20px;
+  color: red;
+}
+
+/*                            END   RECIPES  STYLE                             */
 
 
 
