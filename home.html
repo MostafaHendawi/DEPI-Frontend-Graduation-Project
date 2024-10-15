@@ -10,12 +10,12 @@
         (function() {
                 // https://dashboard.emailjs.com/admin/account
                 emailjs.init({
-                publicKey: "mvWJ7xKQ2k7kQyr6e",
+                publicKey: "2GdE-tQGlHbgrq63L",
                 });
             })();
 
         window.onload = function () {
-            document.getElementById('reservation-form').addEventListener('submit', function(event) {
+            document.getElementById('Reservation-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 // Use the form reference or the form ID as a selector
                 emailjs.sendForm('service_mr5la8h', 'template_5g89ywa', this)
@@ -27,7 +27,6 @@
             });
         }
     </script>
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -434,7 +433,7 @@
           <div class="reservation-image"></div>
           <div class="reservation-form" id="reservation-form">
               <h2><span style="color: #bb9120;">Seamless</span> Reservations for Unforgettable Dining Moments</h2>
-              <form>
+              <form id="Reservation-form">
                   <div class="form-row">
                       <div class="form-group col-md-6">
                           <label for="name">Your Name*</label>
@@ -526,48 +525,45 @@
 
   <!-- Footer Section -->
   <div class="footer ">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-3">
-                  <img class="logo " src="../DEPI-Frontend-Graduation-Project/Assets/footer-logo.png" alt="" >
-                  <p>We deliver fresh, sustainable ingredients from local farms, making it easy for you to enjoy delicious, wholesome meals every day.</p>
-                  <div class="social-icons">
-                      <a href=""><i class="fa-brands fa-facebook"></i></a>
-                      <a href=""><i class="fa-brands fa-pinterest"></i></a>
-                      <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-                      <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-
-                  </div>
-              </div>
-              <div class="col-md-2 links">
-                  <h4>Our Links</h4>
-                  <a href="#">Home</a>
-                  <a href="#">About Us</a>
-                  <a href="#">Careers</a>
-                  <a href="#">Blog</a>
-                  <a href="#">Our Menu</a>
-              </div>
-              <div class="col-md-3 contact-info">
-                  <h4>Contact Us</h4>
-                  <p><a href="tel:+15558358705">+1 555 8358705</a></p>
-                  <p><a href="mailto:kenzi.lawson@example.com">kenzi.lawson@example.com</a></p>
-                  <p>2642 Royal Ln. Mesa, New Jersey 64563</p>
-              </div>
-              <div class="col-md-4 subscribe">
-                  <h4>Subscribe</h4>
-                  <form>
-                      <input type="email" placeholder="Email Address">
-                      <button type="submit">Go</button>
-                  </form>
-                  <p>Saturday - Sunday<br>7:00AM - 2:00PM</p>
-              </div>
-              <br class="linee">
-              <div class=" col-12 copyright ">
-                  &copy; 2024 craetive team project Limited. All Rights Reserved.
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <img class="logo " src="./Assets/footer-logo.png" alt="" >
+                <p>We deliver fresh, sustainable ingredients from local farms, making it easy for you to enjoy delicious, wholesome meals every day.</p>
+                <div class="social-icons2">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-md-2 links">
+                <h4>Our Links</h4>
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Our Menu</a>
+            </div>
+            <div class="col-md-3 contact-info">
+                <h4>Contact Us</h4>
+                <p><a href="tel:+15558358705">+1 555 8358705</a></p>
+                <p><a href="mailto:kenzi.lawson@example.com">kenzi.lawson@example.com</a></p>
+                <p>2642 Royal Ln. Mesa, New Jersey 64563</p>
+            </div>
+            <div class="col-md-4 subscribe">
+                <h4>Subscribe</h4>
+                <form>
+                    <input type="email" placeholder="Email Address">
+                    <button id="button1" type="submit">Go</button>
+                </form>
+                <p>Saturday - Sunday<br>7:00AM - 2:00PM</p>
+            </div>
+            <br class="linee">
+            <div class=" col-12 copyright ">
+                &copy; 2024 craetive team project Limited. All Rights Reserved.
+            </div>
+        </div>
+    </div>
+</div>
  <!-- End of reservation & review & footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
