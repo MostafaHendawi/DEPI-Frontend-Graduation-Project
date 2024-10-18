@@ -1,4 +1,4 @@
-//* ////////////////////////////////////////////// register & login
+// //* ////////////////////////////////////////////// register & login
 
 let registerForm = document.getElementById("registerForm");
 let loginForm = document.getElementById("loginForm");
@@ -27,7 +27,7 @@ let passwordRegEx = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
 let Cpassword = document.getElementById("Cpassword");
 let CpasswordMsg = document.querySelector("#Cpassword + div");
 
-//* ////////////////////////////////////////////////////////////////////////
+// //* ////////////////////////////////////////////////////////////////////////
 let users;
 
 if (localStorage.getItem("users") == null) {
@@ -48,7 +48,7 @@ window.onload = function () {
   }
 };
 
-//* ////////////////////////////////////////////////////////////////////////
+// //* ////////////////////////////////////////////////////////////////////////
 
 if (fName != null) {
   fName.oninput = () => {
@@ -106,7 +106,7 @@ if (Cpassword != null) {
   };
 }
 
-//* ////////////////////////////////////////////////////////////////////////
+// //* ////////////////////////////////////////////////////////////////////////
 
 if (registerForm != null) {
   registerForm.onsubmit = (event) => {
@@ -149,7 +149,7 @@ if (registerForm != null) {
   };
 }
 
-//* ////////////////////////////////////////////////////////////////////////
+// //* ////////////////////////////////////////////////////////////////////////
 
 function IsValid(input, message, condition, messageContent) {
   if (!IsEmpty(input, message)) {
@@ -260,93 +260,271 @@ function rememberYou() {
   }
 }
 
-//* ////////////////////////////////////////////////////////////////////////
+//* ///////////////////////////////////////////////// Explore Menus
+
+// let myImgs = Array.from(document.querySelectorAll(".item img"));
+// let nextElement = document.querySelector("#nextElement");
+// let previousElement = document.querySelector("#previousElement");
+// let cardTitle = document.querySelectorAll(".imagesSlider h2");
+// let cardText = document.querySelectorAll(".cardText");
+
+// let arr = [4, 3, 2, 1, 0];
+// let card4 = document.querySelector(".card4").innerHTML;
+// let card3 = document.querySelector(".card3").innerHTML;
+// let card2 = document.querySelector(".card2").innerHTML;
+// let card1 = document.querySelector(".card1").innerHTML;
+// let card0 = document.querySelector(".card0").innerHTML;
+
+// nextElement.addEventListener("click", showNextElement);
+// previousElement.addEventListener("click", showPreviousElement);
+
+// // 4 3 2 1 0  cards in html
+// // 2 1 0 4 3  imgs
+// let paragraphs = [`${card4}`, `${card3}`, `${card2}`, `${card1}`, `${card0}`];
+// let h4 = [ "Italian Menu","Chinese Menu","Korean menu", "Syrian Menu",  "Egyptian Menu"];
+
+// function showNextElement() {
+//   arr.push(arr.shift());
+//   paragraphs.push(paragraphs.shift());
+//   h4.unshift(h4.pop());
+
+//   for (let index = 4; index >= 0; index--) {
+//     myImgs[arr[index]].setAttribute("src", `./Assets/meal-${index}.jpg`);
+//     cardText[index].innerHTML = paragraphs[index];
+//     cardTitle[index].innerHTML = h4[index];
+//   }
+// }
+
+// // 4 3 2 1 0  cards in html
+// //  3 2 1 0 4 right
+// //  left
+
+// function showPreviousElement() {
+//   arr.unshift(arr.pop());
+//   paragraphs.unshift(paragraphs.pop());
+//   h4.unshift(h4.pop());
+
+//   for (let index = 4; index >= 0; index--) {
+//     myImgs[arr[index]].setAttribute("src", `./Assets/meal-${index}.jpg`);
+//     cardText[index].innerHTML = paragraphs[index];
+//     cardTitle[index].innerHTML = h4[index];
+//   }
+// }
+
+//////////////////////////////////////// Recipes
+
+let searchInput = document.getElementById('searchInput')
+if (searchInput) {
+  searchInput.addEventListener('input', function () {
+    let filter = this.value.toLowerCase();
+    console.log(filter);
+  
+  
+    let cards = document.querySelectorAll('#cardsRow .col-md-6');
+  
+    cards.forEach(function (card) {
+      let title = card.querySelector('h5').textContent.toLowerCase();
+  
+      if (title.startsWith(filter)) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+}
 
 
+//* ////////////////////////////////////////// Cart logic
+
+let plus=document.querySelectorAll(".plus")
+let count=document.querySelectorAll(".count")
+let minus=document.querySelectorAll(".minus")
 
 
-
-
-                  /*        START   exploreMenus  SCRIPT             */
-
-var myImgs = Array.from(document.querySelectorAll(".item img"));
- var nextElement = document.querySelector("#nextElement");
-var previousElement = document.querySelector("#previousElement");
-var cardTitle = document.querySelectorAll(".imagesSlider h4");
-var cardText = document.querySelectorAll(".cardText");
-                  
-                  
-let arr = [4, 3, 2, 1, 0];
-let card4 = document.querySelector(".card4").innerHTML;
-let card3 = document.querySelector(".card3").innerHTML;
-let card2 = document.querySelector(".card2").innerHTML;
-let card1 = document.querySelector(".card1").innerHTML;
-let card0 = document.querySelector(".card0").innerHTML;
-                  
-                  
-                  
-nextElement.addEventListener("click", showNextElement);
-previousElement.addEventListener("click", showPreviousElement);
-                  
-// 4 3 2 1 0  cards in html
-//   2 1 0 4 3  imgs
-let paragraphs = [`${card4}`,`${card3}` ,`${card2}` ,`${card1}` ,`${card0}` ];
-let h4 = ["4", "3", "2", "1", "0"];
-                  
-                  
-                  
-function showNextElement() {
-arr.push(arr.shift());
-paragraphs.push(paragraphs.shift());
-h4.push(h4.shift());
-for (let index = 4; index >= 0; index--) {
-    myImgs[arr[index]].setAttribute("src", `./Assets/meal-${index}.jpg`);
-    cardText[index].innerHTML = paragraphs[index];
-    cardTitle[index].innerHTML = h4[index];
+for (let i = 0; i < plus.length; i++) {
+  let k=1
+  let l;
+  
+  plus[i].onclick=function () { 
+  count[i].innerHTML=k
+   k++
+   l=count[i].innerHTML
+  }
+  
+  minus[i].onclick=function () {   
+  if (l>0) {    
+    console.log(l);
+    
+      count[i].innerHTML=l-1
+      k = l
+      l--
+  }
   }
 }
-                  
-// 4 3 2 1 0  cards in html
-//  3 2 1 0 4 right
-//  left
-                  
-function showPreviousElement() {
-   arr.unshift(arr.pop());
-   paragraphs.unshift(paragraphs.pop());
-   h4.unshift(h4.pop());
-                  
-    for (let index = 4; index >= 0; index--) {
-       myImgs[arr[index]].setAttribute("src", `./Assets/meal-${index}.jpg`);
-       cardText[index].innerHTML = paragraphs[index];
-       cardTitle[index].innerHTML = h4[index];
-       }
- }
-//  =============sweper
+
+
+//* /////////////////////////////////////////////////////
+
+let cartIcon=document.querySelector(".cartIcon")
+let myCart=document.querySelector(".myCart")
+
+
+cartIcon.onclick=()=>{
+if(myCart.style.display=="none"){
+    myCart.style.display="block"
+}
+else{
+    myCart.style.display="none"
+}
+}
+
+
+let addTocart = document.getElementsByClassName("addTocart");
+let cartContent=document.querySelector(".myCart .content")
+
+
+let products;
+
+if(localStorage.getItem('products')==null){
+  cartContent.innerHTML=`Your cart is empty`;
+    cartContent.style="display:flex;justify-content:center;align-items:center;"
+}
+else{
+    products=localStorage.getItem('products') 
+    cartContent.innerHTML=products;
+    cartContent.style="display:flex"
+}
+
+
+for (let i = 0; i < addTocart.length; i++) {
+
+    addTocart[i].onclick = (event) => {
+      
+      let parentCard= event.target.closest(".cards")
+      let imgSrc = parentCard.querySelector("img").src;
+      let price = parentCard.querySelector("b").innerHTML;
+      let name = parentCard.querySelector("h5").innerHTML;
+      let description = parentCard.querySelector("p").innerHTML;
+
+        if (count[i].innerHTML>0) {
+          addProduct(imgSrc, price, name, count[i].innerHTML , description);
+        }
+    };
+}
+
+function addProduct(imgSrc, price, name, countValue , description) {
+
+  let productElement = document.createElement('div');
+  productElement.classList.add('product', 'd-flex', 'justify-content-between', 'align-items-center', 'w-100');
+
+    productElement.innerHTML = `
+        <img width="30px" height="30px" src="${imgSrc}" alt="">
+        <div>
+            <p>${name}</p>
+            <p>${price} x <span class="count">${countValue}</span></p>
+        </div>
+        <i class="trash fa-solid fa-trash-can"></i>
+        <a href="order.html?count=${countValue}&imgSrc=${imgSrc}&price=${price}&name=${name}&description=${description}" class="btn btn-danger">Checkout</a>
+
+        <hr>
+    `;
+
+    if (cartContent.innerHTML == `Your cart is empty`) {
+      cartContent.innerHTML = ""
+    }
+    cartContent.appendChild(productElement);
+
+    let trashIcon = productElement.querySelector('.trash')
+
+    trashIcon.addEventListener('click', function() {
+        del(productElement);
+    })
+
+    updateLocalStorage();
+
+    let modal = document.getElementById("modal")
+    modal.click();
+}
+
+function del(productElement) {
+    productElement.remove(); 
+    updateLocalStorage();
+}
+
+function updateLocalStorage() {
+    let remainingProducts = cartContent.innerHTML;
+    if (remainingProducts == "") {
+      cartContent.innerHTML=`Your cart is empty`;
+      cartContent.style="display:flex;justify-content:center;align-items:center;"
+      localStorage.setItem('products', `Your cart is empty`)
+    }
+    else{
+
+      localStorage.setItem('products', remainingProducts);
+    }
+}
+
+
+//* ////////////////////////////////////////// Add to favourite
+
+let favourite = document.querySelectorAll('.fa-heart:not(.nav)')
+
 function toggleHeart(button) {
-  // Toggle the active class
-  button.classList.toggle('heart-active'); 
+  button.classList.toggle("heart-active");
 
-  // Check if the heart is active and set the display accordingly
-  if (button.classList.contains('heart-active')) {
-    button.style.display = 'block'; // Show the icon if active
+  let itemId = button.getAttribute("data-id");
+
+  let savedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+  if (button.classList.contains("heart-active")) {
+    button.classList.replace("fa-regular", "fa-solid");
+      
+      if (!savedFavorites.includes(itemId)) {
+          savedFavorites.push(itemId);
+      }
+
   } else {
-    button.style.display = 'none'; // Hide the icon if not active
+    
+    button.classList.replace("fa-solid", "fa-regular");
+    savedFavorites = savedFavorites.filter(fav => fav !== itemId);
   }
+  localStorage.setItem('favorites', JSON.stringify(savedFavorites));
 }
 
-// ========
+function loadFavorites() {
+  let savedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+  savedFavorites.forEach(itemId => {
+      let button = document.querySelector(`.fa-heart[data-id="${itemId}"]`);
+      if (button) {
+          button.classList.add("heart-active");
+          button.classList.replace("fa-regular", "fa-solid");
+      }
+  });
+}
+
+window.onload = loadFavorites;
 
 
+//* ////////////////////////////////////////// recipe details
 
+let recipes = document.querySelectorAll(".recipe")
 
-                                          /*          END   exploreMenus  SCRIPT                  */
+recipes.forEach(element => {
+  element.ondblclick =(event)=>{
 
+    let parentCard= event.target.closest(".cards")
+    let imgSrc = parentCard.querySelector("img").src;
+    let price = parentCard.querySelector("b").innerHTML;
+    let name = parentCard.querySelector("h5").innerHTML;
+    let description = parentCard.querySelector("p").innerHTML;
 
+    let url = `details.html?imgSrc=${imgSrc}&price=${price}&name=${name}&description=${description}`;
+    window.location.href = url
 
-
-
-
-
+  }
+});
 
 
 

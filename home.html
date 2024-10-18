@@ -1,606 +1,669 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Savory</title>
-    <link rel="shortcut icon" href="Assets/logo.png" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-                // https://dashboard.emailjs.com/admin/account
-                emailjs.init({
-                publicKey: "2GdE-tQGlHbgrq63L",
-                });
-            })();
 
-        window.onload = function () {
-            document.getElementById('Reservation-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // Use the form reference or the form ID as a selector
-                emailjs.sendForm('service_mr5la8h', 'template_5g89ywa', this)
-                    .then(() => {
-                        console.log('SUCCESS!');
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
-    <link
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Savory</title>
+  <link rel="shortcut icon" href="Assets/logo.png" type="image/x-icon">
+  <!-- email js -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init({
+        publicKey: "2GdE-tQGlHbgrq63L",
+      });
+    })();
+
+    window.onload = function () {
+      document.getElementById('Reservation-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        // Use the form reference or the form ID as a selector
+        emailjs.sendForm('service_mr5la8h', 'template_5g89ywa', this)
+          .then(() => {
+            console.log('SUCCESS!');
+          }, (error) => {
+            console.log('FAILED...', error);
+          });
+      });
+    }
+  </script>
+
+  <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<!-- sweper -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<body id="#">
 
- <!--  -->
-    <link rel="stylesheet" href="CSS/style.css" />
-  </head>
-  <body>
+  <nav class="navbar navbar-expand-lg py-4">
+    <div class="container">
 
-      <nav class="navbar navbar-expand-lg py-4">
-        <div class="container">
+      <a class="navbar-brand fs-1" href="home.html"><i class="fas fa-utensils"></i> Savory</a>
 
-          <a class="navbar-brand fs-1" href="#"><i class="fas fa-utensils"></i> Savory</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
-
-              <li class="nav-item dropdown ">
-                <a class="nav-link active dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Menus
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item " href="menu.html">Egyptian Menu</a></li>
-                  <li><a class="dropdown-item " href="menu.html">Italian Menu</a></li>
-                  <li><hr class="dropdown-divider "></li>
-                  <li><a class="dropdown-item " href="menu.html">Japanese Menu</a></li>
-                  <li><a class="dropdown-item " href="menu.html">Mexico Menu</a></li>
-                </ul>
+          <li class="nav-item dropdown ">
+            <a class="nav-link active dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Menus
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item " href="menu.html">Egyptian Menu</a></li>
+              <li><a class="dropdown-item " href="menu.html">Italian Menu</a></li>
+              <li>
+                <hr class="dropdown-divider ">
               </li>
-
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="recipes.html">Recipes</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">Services</a>
-              </li>
+              <li><a class="dropdown-item " href="menu.html">Japanese Menu</a></li>
+              <li><a class="dropdown-item " href="menu.html">Mexico Menu</a></li>
             </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="recipes.html">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="stuff.html">Stuff</a>
+          </li>
+        </ul>
+
+        <div class="icons d-flex justify-content-between align-items-center gap-3">
+
             
-            <div class="icons d-flex justify-content-between align-items-center gap-3">
+         <a class="p-0" href="https://wa.me/201552924534" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <i class="fas fa-solid fa-bag-shopping cartIcon"></i>
+          <i class="fa-regular fa-sun"></i>
 
-              <i  class="fas fa-phone"></i>
-              <i class="fa-regular fa-heart"></i>
-              <i class="fas fa-solid fa-bag-shopping"></i>
-              <!-- <i class="fa-solid fa-moon"></i> -->
-              <i class="fa-regular fa-sun"></i>
-      
-              <img src="Assets/image-avatar.png" width="40px" alt="">
-            </div>
-
-          </div>
+          <img src="Assets/image-avatar.png" width="40px" alt="">
         </div>
-      </nav>
 
-
-    <!-- ===================================================================================== -->
-    <!-- <form action="" id="search-form">
-      <input type="search" name="" id="search-box" placeholder="search here" />
-      <label for="search-box" class="fas fa-search"></label
-      ><i class="fas fa-times" id="close"></i>
-    </form> -->
-    <!--======================================================================================== -->
-    <section class="home" id="home">
-      <div class="container-fluid">
-        <div class="row align-items-center justify-content-between gap-5  gap-lg-5 ">
-
-          <div class="col col-12 col-lg-6">
-              <div class="content text-center text-lg-start">
-                <h3>Your Ultimate</h3>
-                <h3><span style="font-size: 6rem; color: #aea91d;">food </span> Destination</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                  nam quia magni.
-                </p>
-                <div class="d-flex align-items-center justify-content-center justify-content-lg-start mt-5">
-                  <a href="" class="btn">Buy Now</a>
-                  <div class="d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-play"></i>
-                    <span class="How ms-2">How to Order</span>
-                  </div>
-                </div>
-                
-
-                <div class="twestatic d-flex align-items-center justify-content-center justify-content-lg-start ms-0">
-                  <div class="statistic ">
-                    <strong style="font-size: 4rem">20K+</strong>
-                    <div style="font-size: 1rem; color: #7c7676">Happy Customers</div>
-                  </div>
-                  <div class="">
-                    <div
-                      style="border-left: 1px solid #707473; height: 100%"
-                    ></div>
-                  </div>
-                  <div class="statistic">
-                    <strong style="font-size: 4rem">700+</strong>
-                    <div style="font-size: 1rem; color: #7c7676;">Types of Food</div>
-                  </div>
-                </div>
-            </div>
-          </div>
-
-          <div class="col col-12 col-lg-5">
-              <div class="rt-imege">
-                <div class="image">
-                  <img
-                    src="Assets/landing.png"
-                    alt=""
-                    srcset=""
-                    height="350px"
-                    width="350px"
-                    style="border-radius: 50%"
-                  />
-                  <div class="rt-icons">
-                      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </div>
-                </div>
-              </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-        <!-- START   exploreMenus  SECTION  -->
-        <section class="exploreMenus container">
-          <div class=" header d-flex justify-content-between">
-            <h3 class="py-5">Explore Our Menus</h3>
-            <div class="btn-group d-flex justify-content-between">
-              <button
-                id="previousElement"
-                type="button"
-                class=" btn1 rounded-circle btn mt-4 me-4"
-              >
-                <i class="fas fa-chevron-left"></i>
-              </button>
-              <button
-                id="nextElement"
-                type="button"
-                class="btn2  top-0  rounded-circle btn btn-success mt-4"
-              >
-                <i class="fas fa-chevron-right"></i>
-              </button>
-            </div>
-          </div>
-    
-    
-          <div class="row  ">
-            <div class=" col-sm-12 col-md-12 col-lg-12 col-xl-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title font">Italian menu</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up
-                    the bulk of the card's content 333t3t3t34t3t3t.
-                  </p>
-                </div>
-              </div>
-    
-              <div class="card mt-4">
-                <div class="card-body">
-                  <h5 class="card-title font">Mediterranean menu</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up
-                    the bulk of the card's content 34t34t34t43t3t34t.
-                  </p>
-                </div>
-              </div>
-    
-              <div class="card mt-4">
-                <div class="card-body">
-                  <h5 class="card-title font">Asian menu</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up
-                    the bulk of the card's content reg3rg4g54g.
-                  </p>
-                </div>
-              </div>
-            </div>
-    
-            <div class="position-relative col-md-12 col-lg-12 col-xl-8 imagesSlider">
-        
-              <div class="item images image1 card position-absolute">
-                <img
-                  src="./Assets/meal-1.jpg"
-                  class="card-img-top"
-                  alt="..."
-                  height="432px"
-                />
-                <div class="bg card-body position-absolute bottom-0">
-                  <h4 class="card-title">Italian menu</h4>
-                  <p class="card-text card0 cardText">Some quick example text to build on the card title and make up the bulk of the card's content</p>
-                </div>
-              </div>
-    
-              <div class="item images image2 card position-absolute">
-                <img
-                  src="./Assets/meal-2.jpg"
-                  class="card-img-top"
-                  alt="..."
-                  height="432px"
-                />
-                <div class="bg card-body position-absolute bottom-0">
-                  <h4 class="card-title">1111 menu</h4>
-                  <p class="card-text card1 cardText">jiojjj Some quick example text to build on the card title and make up the bulk of the card's content</p>
-                </div>
-              </div>
-    
-              <div class="item images image3 card position-absolute">
-                <img
-                  src="./Assets/meal-3.jpg"
-                  class="card-img-top"
-                  alt="..."
-                  height="432px"
-                />
-                <div class="bg card-body position-absolute bottom-0">
-                  <h4 class="card-title">2222 menu</h4>
-                  <p class="card-text card2 cardText">Some quick example text to build on the card title and make up the bulk of the card's content</p>
-                </div>
-              </div>
-    
-              <div class="item images image4 card position-absolute">
-                <img
-                  src="./Assets/meal-4.jpg"
-                  class="card-img-top"
-                  alt="..."
-                  height="432px"
-                />
-                <div class="bg card-body position-absolute bottom-0">
-                  <h4 class="card-title">3333 menu</h4>
-                  <p class="card-text card3 cardText">Some quick example text to build on the card title and make up the bulk of the card's content</p>
-                </div>
-              </div>
-    
-              <div class="item images image5 card position-absolute">
-                <img
-                  src="./Assets/meal-0.jpg"
-                  class="card-img-top"
-                  alt="..."
-                  height="432px"
-                />
-                <div class=" bg card-body position-absolute bottom-0">
-                  <h4 class="card-title">Italian Menu</h4>
-                  <p class="card-text cardText card4">Some quick example text to build on the card title and make up the bulk of the card's content </p>
-                </div>
-              </div>
-    
-            </div>
-          </div>
-        </section>
-        <!-- END   exploreMenus  SECTION  -->
-         <!--  start Featured Resipes section-->
-           <div class="featureresioes">
-         <div class="container mt-5 ">
-          <div class="swiper row">
-              <div class="header-container">
-                  <h2 class="title"><span class="fontfeatured">Featured</span> Resipes</h2>
-                  <div class="icon-buttons">
-                    <div class="swiper-button-prevv">
-                      <i class="fa-solid fa-circle-chevron-left fa-xl"></i>
-                    </div>
-                    <div class="swiper-button-nextt">
-                        <i class="fa-solid fa-circle-chevron-right fa-xl" ></i>
-                    </div>
-                  </div>
-              </div>
-              <div class="swiper-wrapper  ">
-                  <div class="swiper-slide col-md-6 col-lg-4 md-5">
-                  <div class="card">
-                      <img src="Assets/r1.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;">
-                      <div class="showcase-badge angle"> New</div>
-                      <button class="btn-action" onclick="toggleHeart(this)">
-                          <i class="fa-solid fa-heart fa-xl icon"></i>
-                      </button>
-                      <div class="card-body">
-                          <p class="card-text">Classic Margherita Pizza</p>
-                      </div>
-                  </div>
-                  </div>
-                  <div class="swiper-slide col-md-6 col-lg-4 md-5">
-            <div class="card">
-              <img src="Assets/r2.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;">
-              <div class="showcase-badge angle"> New</div>
-              <button class="btn-action" onclick="toggleHeart(this)">
-                  <i class="fa-solid fa-heart fa-xl icon"></i>
-                </button>
-                  <div class="card-body">
-                      <p class="card-text">Classic Margherita Pizza</p>
-                  </div>
-            </div>
-                  </div>
-                  <div class="swiper-slide col-md-6 col-lg-4 md-5">
-            <div class="card">
-              <img src="Assets/r3.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;height: 16rem;">
-              <div class="showcase-badge angle"> New</div>
-              <button class="btn-action" onclick="toggleHeart(this)">
-                  <i class="fa-solid fa-heart fa-xl icon"></i>
-                </button>
-                  <div class="card-body">
-      
-                      <p class="card-text">Classic Margherita Pizza</p>
-                  </div>
-            </div>
-                  </div>
-                  <div class="swiper-slide col-md-6 col-lg-4 md-5">
-            <div class="card">
-              <img src="Assets/r4.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;">
-              <div class="showcase-badge angle"> New</div>
-              <button class="btn-action " onclick="toggleHeart(this)">
-                  <i class="fa-solid fa-heart fa-xl icon"></i>
-                </button>
-                  <div class="card-body">
-      
-                      <p class="card-text">Classic Margherita Pizza</p>
-                  </div>
-            </div>
-                  </div>
-                  <div class="swiper-slide col-md-6 col-lg-4 md-5">
-            <div class="card">
-              <img src="Assets/r5.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;height: 16rem;">
-              <div class="showcase-badge angle"> New</div>
-              <button class="btn-action" onclick="toggleHeart(this)">
-                  <i class="fa-solid fa-heart fa-xl icon"></i>
-                </button>
-                  <div class="card-body">
-      
-                      <p class="card-text">Classic Margherita Pizza</p>
-                  </div>
-            </div>
-                  </div>
-                  <div class="swiper-slide col-md-6 col-lg-4   md-5">
-            <div class="card">
-              <img src="Assets/r6.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;">
-              <div class="showcase-badge angle"> New</div>
-              <button class="btn-action" onclick="toggleHeart(this)">
-                  <i class="fa-solid fa-heart fa-xl icon"></i>
-                </button>
-                  <div class="card-body">
-                      <p class="card-text"> Classic Margherita Pizza</p>
-                  </div>
-            </div>
-                  </div>
-      
-              </div>
-          </div>
-      </div>
-      <div class="container mt-5">
-          <div class="row g-3"> <!-- Apply gap between columns -->
-              <div class="col-md-6">
-                  <div class="card m-4"> <!-- Margin on all sides -->
-                      <div class="card-bodyy position-relative">
-                          <img src="Assets/r6.jpg" class="card-img-top"  alt="Product Image 1" style="border-radius: 10px; opacity: 0.8;">
-                          <div class="showcase-badge angle"> 15% OFF</div>
-                          <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
-                            <h2 class="headtex">Great offer for today</h2>
-                            <h2 class="desk">Enjoy a 15% Discount on every</h2>
-                            <h2 class="desk">order of Hakka Noodles</h2>
-                            <h2 class="headtex">Don't Miss Today.</h2>
-                            <button class="btn btn-success ordernow mt-4">Order Now</button>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <div class="card m-4"> <!-- Margin on all sides -->
-                      <div class="card-bodyy position-relative">
-                          <img src="Assets/r2.jpg" class="card-img-top"  alt="Product Image 1" style="border-radius: 10px; opacity: 0.8;">
-                          <div class="showcase-badge angle"> 15% OFF</div>
-                          <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
-                            <h2 class="headtex">Great offer for today</h2>
-                            <h2 class="desk">Enjoy a 15% Discount on every</h2>
-                            <h2 class="desk">order of Hakka Noodles</h2>
-                            <h2 class="headtex">Don't Miss Today.</h2>
-                            <button class="btn btn-success ordernow mt-4">Order Now</button>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
       </div>
     </div>
-         <!--end Featured Resipes section  -->
-    <!-- Start reservation & review & footer -->
-    <div class="container">
-      <div class="reservation-section col-12">
-          <div class="reservation-image"></div>
-          <div class="reservation-form" id="reservation-form">
-              <h2><span style="color: #bb9120;">Seamless</span> Reservations for Unforgettable Dining Moments</h2>
-              <form id="Reservation-form">
-                  <div class="form-row">
-                      <div class="form-group col-md-6">
-                          <label for="name">Your Name*</label>
-                          <input type="text" class="userName form-control" id="name" name="name" placeholder="Your Full Name" required>
-                      </div>
-                      <div class="form-group col-md-6">
-                          <label for="email">Your Email*</label>
-                          <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
-                      </div>
-                  </div>
-                  <div class="form-row">
-                      <div class="form-group col-md-6">
-                          <label for="phone">Phone Number*</label>
-                          <input type="tel" class="phone form-control" id="phone" name="phone" placeholder="+1" required>
-                      </div>
-                      <div class="form-group col-md-6">
-                          <label for="date">Reservation Date*</label>
-                          <input type="date" class="Reservation-Date form-control" id="date" name="date" required>
-                      </div>
-                  </div>
-                  <div class="form-row">
-                      <div class="form-group col-md-6">
-                          <label for="time">Reservation Time*</label>
-                          <input type="time" class="Reservation-Time form-control" id="time" name="time" required>
-                      </div>
-                      <div class="form-group col-md-6">
-                          <label for="person">Person*</label>
-                          <input type="number" class="form-control" id="person" name="person" placeholder="04" required max="10">
-                      </div>
-                  </div>
-                  <div class="form-group">
-                      <label for="notes">Notes*</label>
-                      <textarea class="notes form-control" id="notes" name="notes" rows="3"></textarea>
-                  </div>
-                  <button id="submit" type="submit" class="btn btn-block">Request Reservation</button>
-              </form>
-          </div>
-      </div>
-  </div>
-  
+  </nav>
 
-
-
-
-  <div class="container">
-      <div class="review-section">
-          <div class="background-decor"><i class="fas fa-utensils"></i></div>
-          <div class="review-image"></div>
-          <div class="review-content">
-              <h2>Reviews about our test</h2>
-              <p>Hear what our customers have to say about the incredible flavors in every bite! From savory to sweet, our dishes continue to impress and satisfy, earning rave reviews for their delicious taste and quality.</p>
-              <div class="stars">
-                  &#9733;&#9733;&#9733;&#9733;&#9734;
-              </div>
-              <div class="reviewer">
-                  <img src="./Assets/image-avatar.png" alt="Reviewer">
-                  <div>
-                      <div class="name">Mohamed Afefy</div>
-                      <div class="title">Front-End Developer</div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-
-
-
-  
-  <div class="container features">
-      <div class="row">
-          <div class="col-md-4 feature-box">
-              <h1><i class="fa-solid fa-ranking-star"></i>   </h1>
-                  
-              <h3>Quality Food</h3>
-              <p>Savor the best, freshest ingredients in every bite, as we take pride in offering only premium quality food to fulfill your cravings!</p>
-          </div>
-          <div class="col-md-4 feature-box">
-              <h1> <i class="fa-regular fa-face-kiss-beam"></i></h1>
-              <h3>Super Taste</h3>
-              <p>Indulge in our dishes packed with bold flavors and a super taste that will leave your taste buds craving more!</p>
-          </div>
-          <div class="col-md-4 feature-box">
-              <h1 ><i class="fa-solid fa-truck-fast"></i></h1>
-              <h3>Fast Delivery</h3>
-              <p>Experience lightning-fast delivery, bringing your favorite meals hot and fresh right to your doorstep in no time!</p>
-          </div>
-      </div>
-  </div>
-
-  <!-- Footer Section -->
-  <div class="footer ">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <img class="logo " src="./Assets/footer-logo.png" alt="" >
-                <p>We deliver fresh, sustainable ingredients from local farms, making it easy for you to enjoy delicious, wholesome meals every day.</p>
-                <div class="social-icons2">
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-pinterest"></i></a>
-                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="col-md-2 links">
-                <h4>Our Links</h4>
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Our Menu</a>
-            </div>
-            <div class="col-md-3 contact-info">
-                <h4>Contact Us</h4>
-                <p><a href="tel:+15558358705">+1 555 8358705</a></p>
-                <p><a href="mailto:kenzi.lawson@example.com">kenzi.lawson@example.com</a></p>
-                <p>2642 Royal Ln. Mesa, New Jersey 64563</p>
-            </div>
-            <div class="col-md-4 subscribe">
-                <h4>Subscribe</h4>
-                <form>
-                    <input type="email" placeholder="Email Address">
-                    <button id="button1" type="submit">Go</button>
-                </form>
-                <p>Saturday - Sunday<br>7:00AM - 2:00PM</p>
-            </div>
-            <br class="linee">
-            <div class=" col-12 copyright ">
-                &copy; 2024 craetive team project Limited. All Rights Reserved.
-            </div>
-        </div>
+  <div class="myCart" style="display: none;">
+    <h4>Cart</h4>
+    <div class="content d-flex flex-column gap-2">
+               
     </div>
 </div>
- <!-- End of reservation & review & footer -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+  <!------------------------ Landing ------------------------>
+  <section class="home" id="home">
+    <div class="container-fluid">
+      <div class="row align-items-center justify-content-between gap-5  gap-lg-5 ">
+
+        <div class="col col-12 col-lg-6">
+          <div class="content text-center text-lg-start">
+            <h3>Your Ultimate</h3>
+            <h3><span style="font-size: 6rem; color: #aea91d;">food </span> Destination</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              nam quia magni.
+            </p>
+            <div class="d-flex align-items-center justify-content-center justify-content-lg-start mt-5">
+              <a href="" class="btn">Buy Now</a>
+              <div class="d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-play"></i>
+                <span class="How ms-2">How to Order</span>
+              </div>
+            </div>
+
+
+            <div class="twestatic d-flex align-items-center justify-content-center justify-content-lg-start ms-0">
+              <div class="statistic ">
+                <strong style="font-size: 4rem">20K+</strong>
+                <div style="font-size: 1rem; color: #7c7676">Happy Customers</div>
+              </div>
+              <div class="">
+                <div style="border-left: 1px solid #707473; height: 100%"></div>
+              </div>
+              <div class="statistic">
+                <strong style="font-size: 4rem">700+</strong>
+                <div style="font-size: 1rem; color: #7c7676;">Types of Food</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-12 col-lg-5">
+          <div class="rt-imege">
+            <div class="image">
+              <img src="Assets/landing.png" alt="" srcset="" height="350px" width="350px" style="border-radius: 50%" />
+              <div class="rt-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+    <!------------------------ Popular Categories ------------------------>
+
+    <!------------------------ Featured Recipes ------------------------>
+  <div class="featureresioes">
+    <div class="container mt-5 ">
+      <div class="swiper row">
+
+        <div class="header-container">
+          
+          <h2 class="title"><span class="fontfeatured">Featured</span> Recipes</h2>
+          
+          <div class="icon-buttons">
+            <div class="swiper-button-prevv">
+              <i class="fa-solid fa-circle-chevron-left fa-xl"></i>
+            </div>
+            <div class="swiper-button-nextt">
+              <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide col-md-6 col-lg-4 md-5">
+            <div class="card">
+              <img src="Assets/r1.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;">
+              
+              <div class="showcase-badge angle"> New</div>
+              
+              <button class="btn-action" onclick="toggleHeart(this)">
+                <i class="fa-solid fa-heart fa-xl icon" data-id = '1'></i>
+              </button>
+              
+              <div class="card-body">
+                <p class="card-text">Classic Margherita Pizza</p>
+              
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide col-md-6 col-lg-4 md-5">
+            <div class="card">
+              <img src="Assets/r2.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;">
+              
+              <div class="showcase-badge angle"> New</div>
+              
+              <button class="btn-action" onclick="toggleHeart(this)">
+                <i class="fa-solid fa-heart fa-xl icon" data-id="2"></i>
+              </button>
+              
+              <div class="card-body">
+                <p class="card-text">Classic Margherita Pizza</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide col-md-6 col-lg-4 md-5">
+            <div class="card">
+              
+              <img src="Assets/r3.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;height: 22rem;">
+              
+              <div class="showcase-badge angle"> New</div>
+              
+              <button class="btn-action" onclick="toggleHeart(this)">
+                <i class="fa-solid fa-heart fa-xl icon" data-id="3"></i>
+              </button>
+              
+              <div class="card-body">
+                <p class="card-text">Classic Margherita Pizza</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="swiper-slide col-md-6 col-lg-4 md-5">
+            <div class="card">
+
+              <img src="Assets/r4.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;">
+             
+              <div class="showcase-badge angle"> New</div>
+              
+              <button class="btn-action " onclick="toggleHeart(this)">
+                <i class="fa-solid fa-heart fa-xl icon" data-id="4"></i>
+              </button>
+              
+              <div class="card-body">
+                <p class="card-text">Classic Margherita Pizza</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="swiper-slide col-md-6 col-lg-4 md-5">
+            <div class="card">
+
+              <img src="Assets/r5.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;height: 22rem;">
+              
+              <div class="showcase-badge angle"> New</div>
+              
+              <button class="btn-action" onclick="toggleHeart(this)">
+                <i class="fa-solid fa-heart fa-xl icon" data-id="5"></i>
+              </button>
+              
+              <div class="card-body">
+                <p class="card-text">Classic Margherita Pizza</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="swiper-slide col-md-6 col-lg-4   md-5">
+            <div class="card">
+              
+              <img src="Assets/r6.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px;">
+             
+              <div class="showcase-badge angle"> New</div>
+             
+              <button class="btn-action" onclick="toggleHeart(this)">
+                <i class="fa-solid fa-heart fa-xl icon" data-id="6"></i>
+              </button>
+              
+              <div class="card-body">
+                <p class="card-text"> Classic Margherita Pizza</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row g-3">
+
+        <div class="col-md-6">
+         
+          <div class="card m-4">
+            <div class="card-bodyy position-relative">
+              <img src="Assets/r6.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px; opacity: 0.8;">
+
+              <div class="showcase-badge angle"> 15% OFF</div>
+              
+              <div
+                class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+                <h2 class="headtex">Great offer for today</h2>
+                <h2 class="desk">Enjoy a 15% Discount on every</h2>
+                <h2 class="desk">order of Hakka Noodles</h2>
+                <h2 class="headtex">Don't Miss Today.</h2>
+                <button class="btn btn-success ordernow mt-4">Order Now</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card m-4">
+            <div class="card-bodyy position-relative">
+              
+              <img src="Assets/r2.jpg" class="card-img-top" alt="Product Image 1" style="border-radius: 10px; opacity: 0.8;">
+              
+              <div class="showcase-badge angle"> 15% OFF</div>
+              
+              <div
+                class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+                <h2 class="headtex">Great offer for today</h2>
+                <h2 class="desk">Enjoy a 15% Discount on every</h2>
+                <h2 class="desk">order of Hakka Noodles</h2>
+                <h2 class="headtex">Don't Miss Today.</h2>
+                <button class="btn btn-success ordernow mt-4">Order Now</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!------------------------ Explore Menus ------------------------>
+  <section class="exploreMenus container min-vh-100">
+
+    <div class=" header d-flex justify-content-between">
+      <h3 class="py-5 fw-bold fst-italic fs-1">Explore Our Menus</h3>
+      <div class="btn-group d-flex justify-content-between">
+        <button id="previousElement" type="button" class=" btn1 rounded-circle btn mt-4 me-4">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="nextElement" type="button" class="btn2  top-0  rounded-circle btn btn-success mt-4">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class=" col-sm-12 col-md-12 col-lg-12 col-xl-4 fs-4 cardscolor">
+        <div class="card p-3">
+          <div class="card-body">
+            <h2 class="card-title font">Italian menu</h2>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content 333t3t3t34t3t3t.
+            </p>
+          </div>
+        </div>
+
+        <div class="card mt-4 p-3">
+          <div class="card-body">
+            <h2 class="card-title font">Mediterranean menu</h2>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content 34t34t34t43t3t34t.
+            </p>
+          </div>
+        </div>
+
+        <div class="card mt-4 p-3">
+          <div class="card-body">
+            <h2 class="card-title font">Asian menu</h2>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content reg3rg4g54g.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="position-relative col-md-12 col-lg-12 col-xl-8 imagesSlider">
+
+        <div class="item images image1 card position-absolute">
+          <img src="./Assets/meal-1.jpg" class="card-img-top" alt="..." height="432px" />
+          <div class="bg card-body position-absolute bottom-0">
+            <h2 class="card-title">Italian Menu</h2>
+            <p class="card-text card0 cardText">Some quick example text to build on the card title and make up the bulk
+              of the card's content</p>
+          </div>
+        </div>
+
+        <div class="item images image2 card position-absolute">
+          <img src="./Assets/meal-2.jpg" class="card-img-top" alt="..." height="432px" />
+          <div class="bg card-body position-absolute bottom-0">
+            <h2 class="card-title">Chinese Menu</h2>
+            <p class="card-text card1 cardText"> Some quick example text to build on the card title and make up
+              the bulk of the card's content</p>
+          </div>
+        </div>
+
+        <div class="item images image3 card position-absolute">
+          <img src="./Assets/meal-3.jpg" class="card-img-top" alt="..." height="432px" />
+          <div class="bg card-body position-absolute bottom-0">
+            <h2 class="card-title">Korean menu</h2>
+            <p class="card-text card2 cardText">Some quick example text to build on the card title and make up the bulk
+              of the card's content</p>
+          </div>
+        </div>
+
+        <div class="item images image4 card position-absolute">
+          <img src="./Assets/meal-4.jpg" class="card-img-top" alt="..." height="432px" />
+          <div class="bg card-body position-absolute bottom-0">
+            <h2 class="card-title">Syrian Menu</h2>
+            <p class="card-text card3 cardText">Some quick example text to build on the card title and make up the bulk
+              of the card's content</p>
+          </div>
+        </div>
+
+        <div class="item images image5 card position-absolute">
+          <img src="./Assets/meal-0.jpg" class="card-img-top" alt="..." height="432px" />
+          <div class=" bg card-body position-absolute bottom-0">
+            <h2 class="card-title">Egyptian Menu</h2>
+            <p class="card-text cardText card4">Some quick example text to build on the card title and make up the bulk
+              of the card's content </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!------------------------  Reservation ------------------------>
+  <div class="container">
+    <div class="reservation-section col-12">
+
+      <div class="reservation-image d-none d-md-block">
+        <img src="Assets/reservation-img.png" alt="">
+      </div>
+
+      <div class="reservation-form" id="reservation-form">
+
+        <h2><span style="color: #bb9120;">Seamless</span> Reservations for Unforgettable Dining Moments</h2>
+        
+        <form id="Reservation-form">
+          
+          <div class="form-row">
+
+            <div class="form-group ">
+              <label for="name">Your Name*</label>
+              <input type="text" class="userName form-control" id="name" name="name" placeholder="Your Full Name"
+                required>
+            </div>
+
+            <div class="form-group ">
+              <label for="email">Your Email*</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            
+            <div class="form-group ">
+              <label for="phone">Phone Number*</label>
+              <input type="tel" class="phone form-control" id="phone" name="phone" placeholder="+1" required>
+            </div>
+
+            <div class="form-group ">
+              <label for="date">Reservation Date*</label>
+              <input type="date" class="Reservation-Date form-control" id="date" name="date" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            
+            <div class="form-group ">
+              <label for="time">Reservation Time*</label>
+              <input type="time" class="Reservation-Time form-control" id="time" name="time" required>
+            </div>
+
+            <div class="form-group ">
+              <label for="person">Person*</label>
+              <input type="number" class="form-control" id="person" name="person" placeholder="04" required max="10">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Notes*</label>
+            <textarea class="notes form-control" id="notes" name="notes" rows="3"></textarea>
+          </div>
+
+          <button id="submit" type="submit" class="btn btn-block">Request Reservation</button>
+        
+        </form>
+      </div>
+    </div>
+  </div>
+  <!------------------------  Review  ------------------------------->
+
+  <div class="container">
+    <div class="review-section">
+      
+      <div class="row align-items-center justify-content-between">
+        <div class="col col-12 col-md-4">
+          <div class="review-image text-center"><img width="300" height="300" src="./Assets/review-img.png" alt=""></div>
+
+        </div>
+        <div class="col col-12 col-md-8">
+          <div class="review-content">
+            <h2>Reviews about our test</h2>
+            <p>Hear what our customers have to say about the incredible flavors in every bite! From savory to sweet, our
+              dishes continue to impress and satisfy, earning rave reviews for their delicious taste and quality.</p>
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            
+            <div class="reviewer">
+              <img src="./Assets/image-avatar.png" alt="Reviewer">
+              
+              <div>
+                <div class="name">Mohamed Afefy</div>
+                <div class="title">Front-End Developer</div>
+              </div>
     
-    <!-- sweper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<!--  -->
-    <script src="JS/main.js"></script>
-    <script>
-      const swiper = new Swiper('.swiper', {
-        slidesPerView: 1, // Adjust number of cards visible
-        spaceBetween: 30, // Space between slides
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
+            </div>
+    
+          </div>
+        </div>
+      </div>
+      
+
+
+    </div>
+  </div>
+
+  <!------------------------  Services  ------------------------------->
+  <div class="container features">
+    <div class="row">
+
+      <div class="col-md-4 feature-box">
+        <h1><i class="fa-solid fa-ranking-star"></i> </h1>
+        <h3>Quality Food</h3>
+        <p>Savor the best, freshest ingredients in every bite, as we take pride in offering only premium quality food to
+          fulfill your cravings!</p>
+      </div>
+
+      <div class="col-md-4 feature-box">
+        <h1> <i class="fa-regular fa-face-kiss-beam"></i></h1>
+        <h3>Super Taste</h3>
+        <p>Indulge in our dishes packed with bold flavors and a super taste that will leave your taste buds craving
+          more!</p>
+      </div>
+
+      <div class="col-md-4 feature-box">
+        <h1><i class="fa-solid fa-truck-fast"></i></h1>
+        <h3>Fast Delivery</h3>
+        <p>Experience lightning-fast delivery, bringing your favorite meals hot and fresh right to your doorstep in no
+          time!</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!------------------------  Footer  ------------------------------->
+  <div class="footer ">
+    <div class="container">
+      <div class="row align-items-center g-3 g-md-0">
+
+        <div class="col-md-3 d-flex flex-column gap-3">
+          <img class="logo " src="./Assets/footer-logo.png" alt="">
+          <p>We deliver fresh, sustainable ingredients from local farms, making it easy for you to enjoy delicious,
+            wholesome meals every day.</p>
+          <div class="social-icons2">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-pinterest"></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-2 links d-flex flex-column gap-3">
+          <h4>Our Links</h4>
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#menu">Our Menu</a>
+        </div>
+
+        <div class="col-md-3 contact-info d-flex flex-column gap-3">
+          <h4>Contact Us</h4>
+          <p><a href="tel:+15558358705">+1 555 8358705</a></p>
+          <p><a href="mailto:kenzi.lawson@example.com">kenzi.lawson@example.com</a></p>
+          <p>2642 Royal Ln. Mesa, New Jersey 64563</p>
+        </div>
+
+        <div class="col-md-4 subscribe d-flex flex-column gap-3">
+          <h4>Subscribe</h4>
+          <form>
+            <input type="email" placeholder="Email Address">
+            <button id="button1" type="submit">Go</button>
+          </form>
+          <p>Saturday - Sunday<br>7:00AM - 2:00PM</p>
+        </div>
+
+        <br class="linee">
+
+        <div class=" col-12 copyright ">
+          &copy; 2024 craetive team project Limited. All Rights Reserved.
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="JS/main.js"></script>
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 1, // Adjust number of cards visible
+      spaceBetween: 30, // Space between slides
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-nextt',
+        prevEl: '.swiper-button-prevv',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 10,
         },
-        navigation: {
-          nextEl: '.swiper-button-nextt',
-          prevEl: '.swiper-button-prevv',
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
         },
-        breakpoints: {
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
         },
-      });
-      </script>
-  </body>
+      },
+    });
+  </script>
+  
+</body>
+
 </html>

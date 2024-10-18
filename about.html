@@ -1,193 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Card Layout</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>About</title>
+  <link rel="shortcut icon" href="Assets/logo.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <link rel="stylesheet" href="CSS/style.css">
-  <style>
-    
-  </style>
 </head>
+
 <body>
 
-<div class="profile-card row">
-  <div class="col-md-4 d-flex flex-column align-items-center justify-content-center">
-    <img src="Assets/imgphoto.jpg" alt="Person's Image" class="profile-image">
-    <h5 class="mt-3 welcomclass">Welcome to a culinary paradise where every bite ignites your senses and every moment is a cherished memory</h5>
-  </div>
-  
-  <div class="col-md-8">
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <div class="small-card">
-          <div class="About">About</div>
-          
-          <p class="questionclass">1. About the Restaurant</p>
-<p>
-  Discover the story behind Delicious Bites, a restaurant that has been serving exquisite dishes since 2015. Our passion for quality food and a welcoming atmosphere makes us a favorite among locals.
-  </p>
+  <nav class="navbar navbar-expand-lg py-4">
+    <div class="container">
+
+      <a class="navbar-brand fs-1" href="home.html"><i class="fas fa-utensils"></i> Savory</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
+
+          <li class="nav-item dropdown ">
+            <a class="nav-link active dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Menus
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item " href="menu.html">Egyptian Menu</a></li>
+              <li><a class="dropdown-item " href="menu.html">Italian Menu</a></li>
+              <li>
+                <hr class="dropdown-divider ">
+              </li>
+              <li><a class="dropdown-item " href="menu.html">Japanese Menu</a></li>
+              <li><a class="dropdown-item " href="menu.html">Mexico Menu</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="recipes.html">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="stuff.html">Stuff</a>
+          </li>
+        </ul>
+
+        <div class="icons d-flex justify-content-between align-items-center gap-3">
+
+            
+         <a class="p-0" href="https://wa.me/201552924534" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <i class="fas fa-solid fa-bag-shopping cartIcon"></i>
+          <i class="fa-regular fa-sun"></i>
+
+          <img src="Assets/image-avatar.png" width="40px" alt="">
         </div>
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="small-card">
-          <div class="Team">Team</div>
-          <p  class="questionclass">2. Our Team</p>
-<p>
-  Our dedicated team of chefs and staff is committed to providing exceptional service and delightful dining experiences. With years of experience and a love for food, we strive to exceed your expectations
-  </p>
-        </div>
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="small-card">
-          <div class="Concept">Concept</div>
-          <p class="questionclass">3. Cuisine Concept</p>
-<p>
-  At Delicious Bites, we specialize in a variety of cuisines, including Italian, Mediterranean, and local specialties. Our menu features fresh ingredients and signature dishes like Pasta Primavera and Grilled Lamb Chops
-  </p>
-        </div>
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="small-card">
-          <div class="Vision">Vision</div>
-          <p  class="questionclass">4. Mission and Vision</p>
-<p>
-  Our mission is to create memorable dining experiences with high-quality food and excellent service. We aim to be the top choice for food lovers in the community, continually evolving to meet our guests' needs
-  </p>
-        </div>
+
       </div>
     </div>
-  </div>
+  </nav>
+      
+  <div class="myCart" style="display: none;">
+    <h4>Cart</h4>
+    <div class="content d-flex flex-column gap-2">
+               
+    </div>
 </div>
-<div class="arrow-line"></div>
-<div class="arrow-line"></div>
 
+  <!----------------------------- About -------------------------------->
 
-<!-- Latest News and Social Media -->
-<div class="news-section  profile-card row" style="width: 80%;">
-  <!-- Latest News card -->
+  <div class="profile-card row">
+    <div class="col-md-4 d-flex flex-column align-items-center justify-content-center">
+      <img src="Assets/imgphoto.jpg" alt="Person's Image" class="profile-image">
+      <h5 class="mt-3 welcomclass fw-bold text-dark">Welcome to a culinary paradise where every bite ignites your senses and every moment
+        is a cherished memory</h5>
+    </div>
 
-  <div class="col-md-6">
-    <div class="news-card">
-      <h3 style="margin-bottom: 2rem;font-weight: 700;">Latest News</h3>
+    <div class="col-md-8">
+      <div class="row">
 
+        <div class="col-12 col-md-6">
 
-      <div class="news-item">
-        <img src="flat-lay-salad-with-chicken-sesame-seeds.jpg" alt="News Image">
-        <div class="news-content">
-          <div class="news-title">
-            <span>News Title 1</span>
-            <span class="news-date">2 Days ago</span>
+          <div class="small-card">
+            <div class="About">About</div>
+            <p class="questionclass">
+              Discover the story behind Delicious Bites, a restaurant that has been serving exquisite dishes since 2015.
+              Our passion for quality food and a welcoming atmosphere makes us a favorite among locals.
+            </p>
           </div>
-          <div class="news-description">This is a short description for news 1.</div>
+
         </div>
+
+        <div class="col-12 col-md-6">
+          <div class="small-card">
+            <div class="Team">Team</div>
+            <p class="questionclass">
+              Our dedicated team of chefs and staff is committed to providing exceptional service and delightful dining
+              experiences. With years of experience and a love for food, we strive to exceed your expectations
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="small-card">
+            <div class="Concept">Concept</div>
+            <p class="questionclass">
+              At Delicious Bites, we specialize in a variety of cuisines, including Italian, Mediterranean, and local
+              specialties. Our menu features fresh ingredients and signature dishes like Pasta Primavera and Grilled
+              Lamb Chops
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="small-card">
+            <div class="Vision">Vision</div>
+            <p class="questionclass">
+              Our mission is to create memorable dining experiences with high-quality food and excellent service. We aim
+              to be the top choice for food lovers in the community, continually evolving to meet our guests' needs
+            </p>
+          </div>
+        </div>
+
       </div>
-      <div class="news-separator"></div>
+    </div>
 
+  </div>
 
-      <div class="news-item">
-        <img src="flat-lay-salad-with-chicken-sesame-seeds.jpg" alt="News Image">
-        <div class="news-content">
+  <div class="arrow-line"></div>
+  <div class="arrow-line"></div>
+
+  <!----------------------------- Latest News  and Social Media -------------------------------->
+  <div class="news-section  profile-card row">
+
+    <div class="col-md-6">
+      <div class="news-card">
+        
+        <h3 style="margin-bottom: 2rem;font-weight: 700;">Latest News</h3>
+
+        <div class="news-item">
+          <img src="./Assets/favicon.png" alt="News Image">
+         
+          <div class="news-content">
+            <div class="news-title">
+              <span>News Title 1</span>
+              <span class="news-date">2 Days ago</span>
+            </div>
+
+            <div class="news-description">This is a short description for news 1.</div>
+         
+          </div>
+
+        </div>
+
+        <div class="news-separator"></div>
+
+        <div class="news-item">
+          <img src="./Assets/chefs-2.jpg" alt="News Image">
+          <div class="news-content">
             <div class="news-title">
               <span>News Title 2</span>
               <span class="news-date">2 Days ago</span>
             </div>
             <div class="news-description">This is a short description for news 2.</div>
+          </div>
+        </div>
+
+        <div class="news-separator"></div>
+
+
+        <div class="news-item">
+          <img src="./Assets/hero-img.png" alt="News Image">
+          <div class="news-content">
+            <div class="news-title">
+              <span>News Title 3</span>
+              <span class="news-date">2 Days ago</span>
+            </div>
+            <div class="news-description">This is a short description for news 3.</div>
+          </div>
+        </div>
+
+        <div class="news-separator"></div>
+
+        <div class="news-item">
+          <img src="./Assets/chefs-2.jpg" alt="News Image">
+          <div class="news-content">
+            <div class="news-title">
+              <span>News Title 4</span>
+              <span class="news-date">2 Days ago</span>
+            </div>
+            <div class="news-description">This is a short description for news 4.</div>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="news-separator"></div>
+    <div class="col-md-6">
+      <div class="social-card">
+        <h3 style="margin-bottom: 2rem;font-weight: 700;">Social Media</h3>
+        <div class="social-icons">
 
+          <div class="social-row">
 
-      <div class="news-item">
-        <img src="flat-lay-salad-with-chicken-sesame-seeds.jpg" alt="News Image">
-        <div class="news-content">
-          <div class="news-title">
-            <span>News Title 3</span>
-            <span class="news-date">2 Days ago</span>
+            <div>
+              <a href="#" class="news-item">
+                <i class="fa-brands fa-linkedin fa-2xl"></i>
+              </a>
+            </div>
+
+            <span class="followers">12.4K Followers</span>
+            <button class="btn btn-primary follow-btn">Follow</button>
+
           </div>
-          <div class="news-description">This is a short description for news 3.</div>
-        </div>
-      </div>
-      <div class="news-separator"></div>
 
-      <!-- News item 4 -->
-      <div class="news-item">
-        <img src="flat-lay-salad-with-chicken-sesame-seeds.jpg" alt="News Image">
-        <div class="news-content">
-          <div class="news-title">
-            <span>News Title 4</span>
-            <span class="news-date">2 Days ago</span>
+          <div class="news-separator"></div>
+
+          <div class="social-row">
+            <div>
+              <a href="#" class="news-item">
+                <i class="fa-brands fa-square-facebook fa-2xl"></i>
+              </a>
+            </div>
+
+            <span class="followers">9.2K Followers</span>
+            <button class="btn btn-primary follow-btn">Follow</button>
           </div>
-          <div class="news-description">This is a short description for news 4.</div>
+
+          <div class="news-separator"></div>
+
+          <div class="social-row">
+            <div>
+              <a href="#" class="news-item">
+                <i class="fa-brands fa-instagram fa-2xl"></i>
+              </a>
+            </div>
+
+            <span class="followers">15.3K Followers</span>
+            <button class="btn btn-primary follow-btn">Follow</button>
+          </div>
+
+          <div class="news-separator"></div>
+
+          <div class="social-row">
+            <div>
+              <a href="#" class="news-item">
+                <i class="fa-brands fa-x-twitter fa-2xl"></i>
+              </a>
+            </div>
+            <span class="followers">20.1K Followers</span>
+            <button class="btn btn-primary follow-btn">Follow</button>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
 
 
-  <!-- Social Media card -->
-  <div class="col-md-6">
-    <div class="social-card">
-      <h3 style="margin-bottom: 2rem;font-weight: 700;">Social Media</h3>
-      <div class="social-icons">
-        
-        <!-- LinkedIn -->
-        <div class="social-row">
-          <div>
-            <a href="#" class="news-item">
-              <i class="fa-brands fa-linkedin fa-2xl"></i>
-            </a>
-          </div>
-          <span class="followers">12.4K Followers</span>
-          <button class="btn btn-primary follow-btn">Follow</button>
-        </div>
-        <div class="news-separator"></div>
-  
-        <!-- Facebook -->
-        <div class="social-row">
-          <div>
-            <a href="#" class="news-item">
-              <i class="fa-brands fa-square-facebook fa-2xl"></i>
-            </a>
-          </div>
-          <span class="followers">9.2K Followers</span>
-          <button class="btn btn-primary follow-btn">Follow</button>
-        </div>
-        <div class="news-separator"></div>
-  
-        <!-- Instagram -->
-        <div class="social-row">
-          <div>
-            <a href="#" class="news-item">
-              <i class="fa-brands fa-instagram fa-2xl"></i>
-            </a>
-          </div>
-          <span class="followers">15.3K Followers</span>
-          <button class="btn btn-primary follow-btn">Follow</button>
-        </div>
-        <div class="news-separator"></div>
-  
-        <!-- Twitter (X) -->
-        <div class="social-row">
-          <div >
-            <a href="#" class="news-item">
-              <i class="fa-brands fa-x-twitter fa-2xl"></i>
-            </a>
-          </div>
-          <span class="followers">20.1K Followers</span>
-          <button class="btn btn-primary follow-btn">Follow</button>
-        </div>
-  
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="JS/main.js"></script>
 </body>
 </html>

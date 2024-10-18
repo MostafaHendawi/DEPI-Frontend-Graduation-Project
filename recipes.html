@@ -1,385 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Savory</title>
-        <link rel="shortcut icon" href="Assets/logo.png" type="image/x-icon">
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer"
-        />
-    
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
-        <link rel="stylesheet" href="./CSS/style.css" />
-      </head>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipes</title>
+  <link rel="shortcut icon" href="Assets/logo.png" type="image/x-icon">
 
-      <body>
-        
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
 
+<body>
 
-<section class="recipes container-fluid">
-    <div class="d-flex title">
-        <h2>Recipes</h2>
-        <i class="fa-solid fa-utensils fa-2xl pt-3 ps-2 mb-5" style="color: #ffe600;"></i>    
+  <nav class="navbar navbar-expand-lg py-4">
+    <div class="container">
+
+      <a class="navbar-brand fs-1" href="home.html"><i class="fas fa-utensils"></i> Savory</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
+
+          <li class="nav-item dropdown ">
+            <a class="nav-link active dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Menus
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item " href="menu.html">Egyptian Menu</a></li>
+              <li><a class="dropdown-item " href="menu.html">Italian Menu</a></li>
+              <li>
+                <hr class="dropdown-divider ">
+              </li>
+              <li><a class="dropdown-item " href="menu.html">Japanese Menu</a></li>
+              <li><a class="dropdown-item " href="menu.html">Mexico Menu</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="recipes.html">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="stuff.html">Stuff</a>
+          </li>
+        </ul>
+
+        <div class="icons d-flex justify-content-between align-items-center gap-3">
+
+            
+         <a class="p-0" href="https://wa.me/201552924534" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <i class="fas fa-solid fa-bag-shopping cartIcon"></i>
+          <i class="fa-regular fa-sun"></i>
+
+          <img src="Assets/image-avatar.png" width="40px" alt="">
+        </div>
+
+      </div>
     </div>
+  </nav>
+
+  <div class="myCart" style="display: none;">
+    <h4>Cart</h4>
+    <div class="content d-flex flex-column gap-2">
+               
+    </div>
+</div>
+
+
+  <section class="recipes container-fluid">
     <div class="description d-sm-flex  justify-content-between mt-5 mb-3 ">
-        <h4 class="pt-2">Best Seller</h4>
-         <input 
-              type="text"
-              id="searchInput"
-              placeholder=" Search here"
-              class="form-control mb-2 pb-2  "
-            />
-        
+      <h1 class="pt-2 text-dark">Best Seller</h1>
+      <input type="text" id="searchInput" placeholder=" Search here" class="form-control mb-2   " />
     </div>
+
     <div class="row g-3 mb-4" id="cardsRow">
-            <div class="col-md-6 col-xl-3 col-sm-6">
-              <div class="cards card1 position-relative">
-                <img
-                  src="./Assets/chefs-1.jpg"
-                  alt=""
-                  class="w-50 rounded-circle ms-3 mt-3"
-                />
-                <h5 class="ps-4 pt-4 pe-2">Tacos </h5>
-                <p class="ps-4 pt-2 pe-2">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
-                  quasi.
-                </p>
-                <div class="d-flex justify-content-between">
-                  <b class="ps-4 pt-2">$9.98</b>
-                  <button class="btn btn-light me-3 mb-2 text-success">
-                    <i class="fa-solid fa-plus"></i>
-                    Add
-                  </button>
-                </div>
-                <div class="icon position-absolute top-0 end-0 m-3">
-                  <i class="fa-regular fa-heart"></i>
-                </div>
-              </div>
+
+      <div class="col-md-6 col-xl-3 col-sm-6">
+        <div class="cards card2 position-relative recipe p-4">
+          <img src="./Assets/chefs-2.jpg" alt="" class="w-50 rounded-circle ms-3 mt-3" />
+          <h5 class="ps-4 pt-4 pe-2">Paella </h5>
+          <p class="ps-4 pt-2 pe-2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+            quasi.
+          </p>
+          <div class="d-flex justify-content-between">
+            <b class="ps-4 pt-2">$6.88</b>
+
+            <div class="box">
+              <span class="minus"> <i class="fa-solid fa-minus"></i></span>
+              <span class="count">0</span>
+              <span class="plus"><i class="fa-solid fa-plus"></i></span>
             </div>
 
+            <button class="btn btn-light me-3 mb-2 text-success addTocart">
+              <i class="fa-solid fa-plus"></i>
+              Add
+            </button>
+          </div>
+          <div class="icon position-absolute top-0 end-0 m-3">
+            <i class="fa-regular fa-heart " data-id="7" onclick="toggleHeart(this)"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-3 col-sm-6">
+        <div class="cards card2 position-relative recipe p-4">
+          <img src="./Assets/chefs-2.jpg" alt="" class="w-50 rounded-circle ms-3 mt-3" />
+          <h5 class="ps-4 pt-4 pe-2">Paella </h5>
+          <p class="ps-4 pt-2 pe-2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+            quasi.
+          </p>
+          <div class="d-flex justify-content-between">
+            <b class="ps-4 pt-2">$6.88</b>
 
-
-    
-            <div class="col-md-6 col-xl-3 col-sm-6">
-              <div class="cards card2 position-relative">
-                <img
-                  src="./Assets/chefs-2.jpg"
-                  alt=""
-                  class="w-50 rounded-circle ms-3 mt-3"
-                />
-                <h5 class="ps-4 pt-4 pe-2">Steak </h5>
-                <p class="ps-4 pt-2 pe-2">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
-                  quasi.
-                </p>
-                <div class="d-flex justify-content-between">
-                  <b class="ps-4 pt-2">$6.88</b>
-                  <button class="btn btn-light me-3 mb-2 text-success">
-                    <i class="fa-solid fa-plus"></i>
-                    Add
-                  </button>
-                </div>
-                <div class="icon position-absolute top-0 end-0 m-3">
-                  <i class="fa-regular fa-heart"></i>
-                </div>
-              </div>
+            <div class="box">
+              <span class="minus"> <i class="fa-solid fa-minus"></i></span>
+              <span class="count">0</span>
+              <span class="plus"><i class="fa-solid fa-plus"></i></span>
             </div>
 
+            <button class="btn btn-light me-3 mb-2 text-success addTocart">
+              <i class="fa-solid fa-plus"></i>
+              Add
+            </button>
+          </div>
+          <div class="icon position-absolute top-0 end-0 m-3">
+            <i class="fa-regular fa-heart " data-id="7" onclick="toggleHeart(this)"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-3 col-sm-6">
+        <div class="cards card2 position-relative recipe p-4">
+          <img src="./Assets/chefs-2.jpg" alt="" class="w-50 rounded-circle ms-3 mt-3" />
+          <h5 class="ps-4 pt-4 pe-2">Paella </h5>
+          <p class="ps-4 pt-2 pe-2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+            quasi.
+          </p>
+          <div class="d-flex justify-content-between">
+            <b class="ps-4 pt-2">$6.88</b>
 
-    
-            <div class="col-md-6 col-xl-3 col-sm-6">
-              <div class="cards card3 position-relative">
-                <img
-                  src="./Assets/chefs-3.jpg"
-                  alt=""
-                  class="w-50 rounded-circle ms-3 mt-3"
-                />
-                <h5 class="ps-4 pt-4 pe-2">Sushi </h5>
-                <p class="ps-4 pt-2 pe-2">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
-                  quasi.
-                </p>
-                <div class="d-flex justify-content-between">
-                  <b class="ps-4 pt-2">$12.91</b>
-                  <button class="btn btn-light me-3 mb-2 text-success">
-                    <i class="fa-solid fa-plus"></i>
-                    Add
-                  </button>
-                </div>
-                <div class="icon position-absolute top-0 end-0 m-3">
-                  <i class="fa-regular fa-heart"></i>
-                </div>
-              </div>
-            </div>
-            
-    
-            <div class="col-md-6 col-xl-3 col-sm-6">
-              <div class="cards card4 position-relative">
-                <img
-                  src="./Assets/favicon.png"
-                  alt=""
-                  class="w-50 rounded-circle ms-3 mt-3"
-                />
-                <h5 class="ps-4 pt-4 pe-2">Pasta</h5>
-                <p class="ps-4 pt-2 pe-2">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
-                  quasi.
-                </p>
-                <div class="d-flex justify-content-between">
-                  <b class="ps-4 pt-2">$6.90</b>
-                  <button class="btn btn-light me-3 mb-2 text-success">
-                    <i class="fa-solid fa-plus"></i>
-                    Add
-                  </button>
-                </div>
-                <div class="icon position-absolute top-0 end-0 m-3">
-                  <i class="fa-regular fa-heart"></i>
-                </div>
-              </div>
+            <div class="box">
+              <span class="minus"> <i class="fa-solid fa-minus"></i></span>
+              <span class="count">0</span>
+              <span class="plus"><i class="fa-solid fa-plus"></i></span>
             </div>
 
+            <button class="btn btn-light me-3 mb-2 text-success addTocart">
+              <i class="fa-solid fa-plus"></i>
+              Add
+            </button>
+          </div>
+          <div class="icon position-absolute top-0 end-0 m-3">
+            <i class="fa-regular fa-heart " data-id="7" onclick="toggleHeart(this)"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-3 col-sm-6">
+        <div class="cards card2 position-relative recipe p-4">
+          <img src="./Assets/chefs-2.jpg" alt="" class="w-50 rounded-circle ms-3 mt-3" />
+          <h5 class="ps-4 pt-4 pe-2">Paella </h5>
+          <p class="ps-4 pt-2 pe-2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+            quasi.
+          </p>
+          <div class="d-flex justify-content-between">
+            <b class="ps-4 pt-2">$6.88</b>
 
-            <div class="col-md-6 col-xl-3 col-sm-6">
-                <div class="cards card1 position-relative">
-                  <img
-                    src="./Assets/chefs-1.jpg"
-                    alt=""
-                    class="w-50 rounded-circle ms-3 mt-3"
-                  />
-                  <h5 class="ps-4 pt-4 pe-2">Barbecue Ribs</h5>
-                  <p class="ps-4 pt-2 pe-2">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
-                    quasi.
-                  </p>
-                  <div class="d-flex justify-content-between">
-                    <b class="ps-4 pt-2">$9.98</b>
-                    <button class="btn btn-light me-3 mb-2 text-success">
-                      <i class="fa-solid fa-plus"></i>
-                      Add
-                    </button>
-                  </div>
-                  <div class="icon position-absolute top-0 end-0 m-3">
-                    <i class="fa-regular fa-heart"></i>
-                  </div>
-                </div>
-              </div>
+            <div class="box">
+              <span class="minus"> <i class="fa-solid fa-minus"></i></span>
+              <span class="count">0</span>
+              <span class="plus"><i class="fa-solid fa-plus"></i></span>
+            </div>
 
+            <button class="btn btn-light me-3 mb-2 text-success addTocart">
+              <i class="fa-solid fa-plus"></i>
+              Add
+            </button>
+          </div>
+          <div class="icon position-absolute top-0 end-0 m-3">
+            <i class="fa-regular fa-heart " data-id="7" onclick="toggleHeart(this)"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-3 col-sm-6">
+        <div class="cards card2 position-relative recipe p-4">
+          <img src="./Assets/chefs-2.jpg" alt="" class="w-50 rounded-circle ms-3 mt-3" />
+          <h5 class="ps-4 pt-4 pe-2">Paella </h5>
+          <p class="ps-4 pt-2 pe-2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+            quasi.
+          </p>
+          <div class="d-flex justify-content-between">
+            <b class="ps-4 pt-2">$6.88</b>
 
-              <div class="col-md-6 col-xl-3 col-sm-6">
-                <div class="cards card2 position-relative">
-                  <img
-                    src="./Assets/chefs-2.jpg"
-                    alt=""
-                    class="w-50 rounded-circle ms-3 mt-3"
-                  />
-                  <h5 class="ps-4 pt-4 pe-2">Paella </h5>
-                  <p class="ps-4 pt-2 pe-2">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
-                    quasi.
-                  </p>
-                  <div class="d-flex justify-content-between">
-                    <b class="ps-4 pt-2">$6.88</b>
-                    <button class="btn btn-light me-3 mb-2 text-success">
-                      <i class="fa-solid fa-plus"></i>
-                      Add
-                    </button>
-                  </div>
-                  <div class="icon position-absolute top-0 end-0 m-3">
-                    <i class="fa-regular fa-heart"></i>
-                  </div>
-                </div>
-              </div>
+            <div class="box">
+              <span class="minus"> <i class="fa-solid fa-minus"></i></span>
+              <span class="count">0</span>
+              <span class="plus"><i class="fa-solid fa-plus"></i></span>
+            </div>
 
+            <button class="btn btn-light me-3 mb-2 text-success addTocart">
+              <i class="fa-solid fa-plus"></i>
+              Add
+            </button>
+          </div>
+          <div class="icon position-absolute top-0 end-0 m-3">
+            <i class="fa-regular fa-heart " data-id="7" onclick="toggleHeart(this)"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-3 col-sm-6">
+        <div class="cards card2 position-relative recipe p-4">
+          <img src="./Assets/chefs-2.jpg" alt="" class="w-50 rounded-circle ms-3 mt-3" />
+          <h5 class="ps-4 pt-4 pe-2">Paella </h5>
+          <p class="ps-4 pt-2 pe-2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+            quasi.
+          </p>
+          <div class="d-flex justify-content-between">
+            <b class="ps-4 pt-2">$6.88</b>
 
-              <div class="col-md-6 col-xl-3 col-sm-6">
-                <div class="cards card3 position-relative">
-                  <img
-                    src="./Assets/chefs-3.jpg"
-                    alt=""
-                    class="w-50 rounded-circle ms-3 mt-3"
-                  />
-                  <h5 class="ps-4 pt-4 pe-2">Falafel </h5>
-                  <p class="ps-4 pt-2 pe-2">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
-                    quasi.
-                  </p>
-                  <div class="d-flex justify-content-between">
-                    <b class="ps-4 pt-2">$12.91</b>
-                    <button class="btn btn-light me-3 mb-2 text-success">
-                      <i class="fa-solid fa-plus"></i>
-                      Add
-                    </button>
-                  </div>
-                  <div class="icon position-absolute top-0 end-0 m-3">
-                    <i class="fa-regular fa-heart"></i>
-                  </div>
-                </div>
-              </div>
+            <div class="box">
+              <span class="minus"> <i class="fa-solid fa-minus"></i></span>
+              <span class="count">0</span>
+              <span class="plus"><i class="fa-solid fa-plus"></i></span>
+            </div>
 
+            <button class="btn btn-light me-3 mb-2 text-success addTocart">
+              <i class="fa-solid fa-plus"></i>
+              Add
+            </button>
+          </div>
+          <div class="icon position-absolute top-0 end-0 m-3">
+            <i class="fa-regular fa-heart " data-id="7" onclick="toggleHeart(this)"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-3 col-sm-6">
+        <div class="cards card2 position-relative recipe p-4">
+          <img src="./Assets/chefs-2.jpg" alt="" class="w-50 rounded-circle ms-3 mt-3" />
+          <h5 class="ps-4 pt-4 pe-2">Paella </h5>
+          <p class="ps-4 pt-2 pe-2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+            quasi.
+          </p>
+          <div class="d-flex justify-content-between">
+            <b class="ps-4 pt-2">$6.88</b>
 
-              <div class="col-md-6 col-xl-3 col-sm-6">
-                <div class="cards card4 position-relative">
-                  <img
-                    src="./Assets/favicon.png"
-                    alt=""
-                    class="w-50 rounded-circle ms-3 mt-3"
-                  />
-                  <h5 class="ps-4 pt-4 pe-2">Fish and Chips</h5>
-                  <p class="ps-4 pt-2 pe-2">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
-                    quasi.
-                  </p>
-                  <div class="d-flex justify-content-between">
-                    <b class="ps-4 pt-2">$6.90</b>
-                    <button class="btn btn-light me-3 mb-2 text-success">
-                      <i class="fa-solid fa-plus"></i>
-                      Add
-                    </button>
-                  </div>
-                  <div class="icon position-absolute top-0 end-0 m-3">
-                    <i class="fa-regular fa-heart"></i>
-                  </div>
-                </div>
-              </div>
+            <div class="box">
+              <span class="minus"> <i class="fa-solid fa-minus"></i></span>
+              <span class="count">0</span>
+              <span class="plus"><i class="fa-solid fa-plus"></i></span>
+            </div>
 
+            <button class="btn btn-light me-3 mb-2 text-success addTocart">
+              <i class="fa-solid fa-plus"></i>
+              Add
+            </button>
+          </div>
+          <div class="icon position-absolute top-0 end-0 m-3">
+            <i class="fa-regular fa-heart " data-id="7" onclick="toggleHeart(this)"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-3 col-sm-6">
+        <div class="cards card2 position-relative recipe p-4">
+          <img src="./Assets/chefs-2.jpg" alt="" class="w-50 rounded-circle ms-3 mt-3" />
+          <h5 class="ps-4 pt-4 pe-2">Paella </h5>
+          <p class="ps-4 pt-2 pe-2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
+            quasi.
+          </p>
+          <div class="d-flex justify-content-between">
+            <b class="ps-4 pt-2">$6.88</b>
 
-              <div class="col-md-6 col-xl-3 col-sm-6">
-                <div class="cards card1 position-relative">
-                  <img
-                    src="./Assets/chefs-1.jpg"
-                    alt=""
-                    class="w-50 rounded-circle ms-3 mt-3"
-                  />
-                  <h5 class="ps-4 pt-4 pe-2"> Pizza</h5>
-                  <p class="ps-4 pt-2 pe-2">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
-                    quasi.
-                  </p>
-                  <div class="d-flex justify-content-between">
-                    <b class="ps-4 pt-2">$9.98</b>
-                    <button class="btn btn-light me-3 mb-2 text-success">
-                      <i class="fa-solid fa-plus"></i>
-                      Add
-                    </button>
-                  </div>
-                  <div class="icon position-absolute top-0 end-0 m-3">
-                    <i class="fa-regular fa-heart"></i>
-                  </div>
-                </div>
-              </div>
+            <div class="box">
+              <span class="minus"> <i class="fa-solid fa-minus"></i></span>
+              <span class="count">0</span>
+              <span class="plus"><i class="fa-solid fa-plus"></i></span>
+            </div>
 
-
-              <div class="col-md-6 col-xl-3 col-sm-6">
-                <div class="cards card2 position-relative">
-                  <img
-                    src="./Assets/chefs-2.jpg"
-                    alt=""
-                    class="w-50 rounded-circle ms-3 mt-3"
-                  />
-                  <h5 class="ps-4 pt-4 pe-2">Burgers</h5>
-                  <p class="ps-4 pt-2 pe-2">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
-                    quasi.
-                  </p>
-                  <div class="d-flex justify-content-between">
-                    <b class="ps-4 pt-2">$6.88</b>
-                    <button class="btn btn-light me-3 mb-2 text-success">
-                      <i class="fa-solid fa-plus"></i>
-                      Add
-                    </button>
-                  </div>
-                  <div class="icon position-absolute top-0 end-0 m-3">
-                    <i class="fa-regular fa-heart"></i>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="col-md-6 col-xl-3 col-sm-6">
-                <div class="cards card3 position-relative">
-                  <img
-                    src="./Assets/chefs-3.jpg"
-                    alt=""
-                    class="w-50 rounded-circle ms-3 mt-3"
-                  />
-                  <h5 class="ps-4 pt-4 pe-2">Ramen </h5>
-                  <p class="ps-4 pt-2 pe-2">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
-                    quasi.
-                  </p>
-                  <div class="d-flex justify-content-between">
-                    <b class="ps-4 pt-2">$12.91</b>
-                    <button class="btn btn-light me-3 mb-2 text-success">
-                      <i class="fa-solid fa-plus"></i>
-                      Add
-                    </button>
-                  </div>
-                  <div class="icon position-absolute top-0 end-0 m-3">
-                    <i class="fa-regular fa-heart"></i>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-xl-3 col-sm-6">
-                <div class="cards card4 position-relative">
-                  <img
-                    src="./Assets/favicon.png"
-                    alt=""
-                    class="w-50 rounded-circle ms-3 mt-3"
-                  />
-                  <h5 class="ps-4 pt-4 pe-2">Barbecue Ribs</h5>
-                  <p class="ps-4 pt-2 pe-2">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores,
-                    quasi.
-                  </p>
-                  <div class="d-flex justify-content-between">
-                    <b class="ps-4 pt-2">$6.90</b>
-                    <button class="btn btn-light me-3 mb-2 text-success">
-                      <i class="fa-solid fa-plus"></i>
-                      Add
-                    </button>
-                  </div>
-                  <div class="icon position-absolute top-0 end-0 m-3">
-                    <i class="fa-regular fa-heart"></i>
-                  </div>
-                </div>
-              </div>
-
-
+            <button class="btn btn-light me-3 mb-2 text-success addTocart">
+              <i class="fa-solid fa-plus"></i>
+              Add
+            </button>
+          </div>
+          <div class="icon position-absolute top-0 end-0 m-3">
+            <i class="fa-regular fa-heart " data-id="7" onclick="toggleHeart(this)"></i>
+          </div>
+        </div>
+      </div>
 
     </div>
+  </section>
 
 
-</section>
-        
-<script>
-    document.getElementById('searchInput').addEventListener('input', function() {
-        let filter = this.value.toLowerCase();
-        console.log(filter);
-        
-    
-        let cards = document.querySelectorAll('#cardsRow .col-md-6');
-        
-        cards.forEach(function(card) {
-            let title = card.querySelector('h5').textContent.toLowerCase();
-            
-            if (title.startsWith(filter)) {
-                card.style.display = '';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    });
-</script>
+<button id="modal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+</button>
 
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: var(--main-color);">Savory</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       Added successfully to the cart
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-      </body>
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./JS/main.js"></script>
+
+</body>
 </html>
