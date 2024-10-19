@@ -1,3 +1,12 @@
+let profilePic = document.getElementsByClassName("profile")
+
+for (let i = 0; i < profilePic.length; i++) {
+  if (localStorage.getItem("userImg")) {
+    
+    profilePic[i].src = localStorage.getItem("userImg")
+  }
+  
+}
 // //* ////////////////////////////////////////////// register & login
 
 let registerForm = document.getElementById("registerForm");
@@ -203,17 +212,19 @@ function AreIdentical() {
 }
 
 function ShowToast() {
-  const toastLiveExample = document.getElementById("liveToast");
-  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+  let toastLiveExample = document.getElementById("liveToast");
+  let toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
   toastBootstrap.show();
 }
 
-function SaveUserDataToLocalStorage() {
+function SaveUserDataToLocalStorage(registerForm) {
   let formData = new FormData(registerForm);
   let user = {};
   formData.forEach((value, key) => {
     user[key] = value;
   });
+
+  user.accountType = "Basic";
 
   users.push(user);
 
@@ -224,7 +235,11 @@ function SaveUserDataToLocalStorage() {
 if (loginForm != null) {
   loginForm.onsubmit = (event) => {
     event.preventDefault();
-    if (IsValidToLogin()) {
+    let result = IsValidToLogin();
+    console.log(result.isValid);
+    console.log(result.user);
+    if (result.isValid) {
+      localStorage.setItem("currentUser", JSON.stringify(result.user));
       rememberYou();
       ShowToast();
       setTimeout(() => {
@@ -236,18 +251,24 @@ if (loginForm != null) {
 
 function IsValidToLogin() {
   let isValid = false;
+  let user;
 
   users.some(function (element) {
     if (element.email == email.value && element.password == password.value) {
       isValid = true;
+      user = element;
       loginStatus.classList.add("d-none");
       return true;
     } else {
-      loginStatus.classList.remove("d-none");
       return false;
     }
   });
-  return isValid;
+
+  if (!isValid) {
+    loginStatus.classList.remove("d-none");
+  }
+
+  return { isValid, user };
 }
 
 function rememberYou() {
@@ -260,165 +281,115 @@ function rememberYou() {
   }
 }
 
-//* ///////////////////////////////////////////////// Explore Menus
 
-// let myImgs = Array.from(document.querySelectorAll(".item img"));
-// let nextElement = document.querySelector("#nextElement");
-// let previousElement = document.querySelector("#previousElement");
-// let cardTitle = document.querySelectorAll(".imagesSlider h2");
-// let cardText = document.querySelectorAll(".cardText");
 
-// let arr = [4, 3, 2, 1, 0];
-// let card4 = document.querySelector(".card4").innerHTML;
-// let card3 = document.querySelector(".card3").innerHTML;
-// let card2 = document.querySelector(".card2").innerHTML;
-// let card1 = document.querySelector(".card1").innerHTML;
-// let card0 = document.querySelector(".card0").innerHTML;
+//* ////////////////////////////////////// Recipes
 
-// nextElement.addEventListener("click", showNextElement);
-// previousElement.addEventListener("click", showPreviousElement);
-
-// // 4 3 2 1 0  cards in html
-// // 2 1 0 4 3  imgs
-// let paragraphs = [`${card4}`, `${card3}`, `${card2}`, `${card1}`, `${card0}`];
-// let h4 = [ "Italian Menu","Chinese Menu","Korean menu", "Syrian Menu",  "Egyptian Menu"];
-
-// function showNextElement() {
-//   arr.push(arr.shift());
-//   paragraphs.push(paragraphs.shift());
-//   h4.unshift(h4.pop());
-
-//   for (let index = 4; index >= 0; index--) {
-//     myImgs[arr[index]].setAttribute("src", `./Assets/meal-${index}.jpg`);
-//     cardText[index].innerHTML = paragraphs[index];
-//     cardTitle[index].innerHTML = h4[index];
-//   }
-// }
-
-// // 4 3 2 1 0  cards in html
-// //  3 2 1 0 4 right
-// //  left
-
-// function showPreviousElement() {
-//   arr.unshift(arr.pop());
-//   paragraphs.unshift(paragraphs.pop());
-//   h4.unshift(h4.pop());
-
-//   for (let index = 4; index >= 0; index--) {
-//     myImgs[arr[index]].setAttribute("src", `./Assets/meal-${index}.jpg`);
-//     cardText[index].innerHTML = paragraphs[index];
-//     cardTitle[index].innerHTML = h4[index];
-//   }
-// }
-
-//////////////////////////////////////// Recipes
-
-let searchInput = document.getElementById('searchInput')
+let searchInput = document.getElementById("searchInput");
 if (searchInput) {
-  searchInput.addEventListener('input', function () {
+  searchInput.addEventListener("input", function () {
     let filter = this.value.toLowerCase();
     console.log(filter);
-  
-  
-    let cards = document.querySelectorAll('#cardsRow .col-md-6');
-  
+
+    let cards = document.querySelectorAll("#cardsRow .col-md-6");
+
     cards.forEach(function (card) {
-      let title = card.querySelector('h5').textContent.toLowerCase();
-  
+      let title = card.querySelector("h5").textContent.toLowerCase();
+
       if (title.startsWith(filter)) {
-        card.style.display = '';
+        card.style.display = "";
       } else {
-        card.style.display = 'none';
+        card.style.display = "none";
       }
     });
   });
 }
 
-
 //* ////////////////////////////////////////// Cart logic
 
-let plus=document.querySelectorAll(".plus")
-let count=document.querySelectorAll(".count")
-let minus=document.querySelectorAll(".minus")
-
+let plus = document.querySelectorAll(".plus");
+let count = document.querySelectorAll(".count");
+let minus = document.querySelectorAll(".minus");
 
 for (let i = 0; i < plus.length; i++) {
-  let k=1
+  let k = 1;
   let l;
-  
-  plus[i].onclick=function () { 
-  count[i].innerHTML=k
-   k++
-   l=count[i].innerHTML
-  }
-  
-  minus[i].onclick=function () {   
-  if (l>0) {    
-    console.log(l);
-    
-      count[i].innerHTML=l-1
-      k = l
-      l--
-  }
-  }
+
+  plus[i].onclick = function () {
+    count[i].innerHTML = k;
+    k++;
+    l = count[i].innerHTML;
+  };
+
+  minus[i].onclick = function () {
+    if (l > 0) {
+      console.log(l);
+
+      count[i].innerHTML = l - 1;
+      k = l;
+      l--;
+    }
+  };
 }
 
 
-//* /////////////////////////////////////////////////////
+let cartIcon = document.querySelector(".cartIcon");
+let myCart = document.querySelector(".myCart");
 
-let cartIcon=document.querySelector(".cartIcon")
-let myCart=document.querySelector(".myCart")
-
-
-cartIcon.onclick=()=>{
-if(myCart.style.display=="none"){
-    myCart.style.display="block"
+if (cartIcon) {
+  cartIcon.onclick = () => {
+    if (myCart.style.display == "none") {
+      myCart.style.display = "block";
+    } else {
+      myCart.style.display = "none";
+    }
+  };
 }
-else{
-    myCart.style.display="none"
-}
-}
-
 
 let addTocart = document.getElementsByClassName("addTocart");
-let cartContent=document.querySelector(".myCart .content")
-
+let cartContent = document.querySelector(".myCart .content");
 
 let products;
 
-if(localStorage.getItem('products')==null){
-  cartContent.innerHTML=`Your cart is empty`;
-    cartContent.style="display:flex;justify-content:center;align-items:center;"
+if (cartContent) {
+  if (localStorage.getItem("products") == null) {
+    cartContent.innerHTML = `Your cart is empty`;
+    cartContent.style =
+      "display:flex;justify-content:center;align-items:center;";
+  } else {
+    products = localStorage.getItem("products");
+    cartContent.innerHTML = products;
+    cartContent.style = "display:flex";
+  }
 }
-else{
-    products=localStorage.getItem('products') 
-    cartContent.innerHTML=products;
-    cartContent.style="display:flex"
-}
 
-
-for (let i = 0; i < addTocart.length; i++) {
-
+if (addTocart) {
+  for (let i = 0; i < addTocart.length; i++) {
     addTocart[i].onclick = (event) => {
-      
-      let parentCard= event.target.closest(".cards")
+      let parentCard = event.target.closest(".cards");
       let imgSrc = parentCard.querySelector("img").src;
       let price = parentCard.querySelector("b").innerHTML;
       let name = parentCard.querySelector("h5").innerHTML;
       let description = parentCard.querySelector("p").innerHTML;
 
-        if (count[i].innerHTML>0) {
-          addProduct(imgSrc, price, name, count[i].innerHTML , description);
-        }
+      if (count[i].innerHTML > 0) {
+        addProduct(imgSrc, price, name, count[i].innerHTML, description);
+      }
     };
+  }
 }
 
-function addProduct(imgSrc, price, name, countValue , description) {
+function addProduct(imgSrc, price, name, countValue, description) {
+  let productElement = document.createElement("div");
+  productElement.classList.add(
+    "product",
+    "d-flex",
+    "justify-content-between",
+    "align-items-center",
+    "w-100"
+  );
 
-  let productElement = document.createElement('div');
-  productElement.classList.add('product', 'd-flex', 'justify-content-between', 'align-items-center', 'w-100');
-
-    productElement.innerHTML = `
+  productElement.innerHTML = `
         <img width="30px" height="30px" src="${imgSrc}" alt="">
         <div>
             <p>${name}</p>
@@ -430,101 +401,347 @@ function addProduct(imgSrc, price, name, countValue , description) {
         <hr>
     `;
 
-    if (cartContent.innerHTML == `Your cart is empty`) {
-      cartContent.innerHTML = ""
-    }
-    cartContent.appendChild(productElement);
+  if (cartContent.innerHTML == `Your cart is empty`) {
+    cartContent.innerHTML = "";
+  }
+  cartContent.appendChild(productElement);
 
-    let trashIcon = productElement.querySelector('.trash')
+  let trashIcon = productElement.querySelector(".trash");
 
-    trashIcon.addEventListener('click', function() {
-        del(productElement);
-    })
+  trashIcon.addEventListener("click", function () {
+    del(productElement);
+  });
 
-    updateLocalStorage();
+  updateLocalStorage();
 
-    let modal = document.getElementById("modal")
-    modal.click();
+  let modal = document.getElementById("modal");
+  modal.click();
 }
 
 function del(productElement) {
-    productElement.remove(); 
-    updateLocalStorage();
+  productElement.remove();
+  updateLocalStorage();
 }
 
 function updateLocalStorage() {
-    let remainingProducts = cartContent.innerHTML;
-    if (remainingProducts == "") {
-      cartContent.innerHTML=`Your cart is empty`;
-      cartContent.style="display:flex;justify-content:center;align-items:center;"
-      localStorage.setItem('products', `Your cart is empty`)
-    }
-    else{
-
-      localStorage.setItem('products', remainingProducts);
-    }
+  let remainingProducts = cartContent.innerHTML;
+  if (remainingProducts == "") {
+    cartContent.innerHTML = `Your cart is empty`;
+    cartContent.style =
+      "display:flex;justify-content:center;align-items:center;";
+    localStorage.setItem("products", `Your cart is empty`);
+  } else {
+    localStorage.setItem("products", remainingProducts);
+  }
 }
-
 
 //* ////////////////////////////////////////// Add to favourite
 
-let favourite = document.querySelectorAll('.fa-heart:not(.nav)')
+let favourite = document.querySelectorAll(".fa-heart:not(.nav)");
 
 function toggleHeart(button) {
   button.classList.toggle("heart-active");
 
   let itemId = button.getAttribute("data-id");
 
-  let savedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  let savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
   if (button.classList.contains("heart-active")) {
     button.classList.replace("fa-regular", "fa-solid");
-      
-      if (!savedFavorites.includes(itemId)) {
-          savedFavorites.push(itemId);
-      }
 
+    if (!savedFavorites.includes(itemId)) {
+      savedFavorites.push(itemId);
+    }
   } else {
-    
     button.classList.replace("fa-solid", "fa-regular");
-    savedFavorites = savedFavorites.filter(fav => fav !== itemId);
+    savedFavorites = savedFavorites.filter((fav) => fav !== itemId);
   }
-  localStorage.setItem('favorites', JSON.stringify(savedFavorites));
+  localStorage.setItem("favorites", JSON.stringify(savedFavorites));
 }
 
 function loadFavorites() {
-  let savedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  let savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-  savedFavorites.forEach(itemId => {
-      let button = document.querySelector(`.fa-heart[data-id="${itemId}"]`);
-      if (button) {
-          button.classList.add("heart-active");
-          button.classList.replace("fa-regular", "fa-solid");
-      }
+  savedFavorites.forEach((itemId) => {
+    let button = document.querySelector(`.fa-heart[data-id="${itemId}"]`);
+    if (button) {
+      button.classList.add("heart-active");
+      button.classList.replace("fa-regular", "fa-solid");
+    }
   });
 }
 
 window.onload = loadFavorites;
 
-
 //* ////////////////////////////////////////// recipe details
 
-let recipes = document.querySelectorAll(".recipe")
+let recipes = document.querySelectorAll(".recipe");
 
-recipes.forEach(element => {
-  element.ondblclick =(event)=>{
-
-    let parentCard= event.target.closest(".cards")
+recipes.forEach((element) => {
+  element.ondblclick = (event) => {
+    let parentCard = event.target.closest(".cards");
     let imgSrc = parentCard.querySelector("img").src;
     let price = parentCard.querySelector("b").innerHTML;
     let name = parentCard.querySelector("h5").innerHTML;
     let description = parentCard.querySelector("p").innerHTML;
 
     let url = `details.html?imgSrc=${imgSrc}&price=${price}&name=${name}&description=${description}`;
-    window.location.href = url
-
-  }
+    window.location.href = url;
+  };
 });
+
+//* ////////////////////////////////////////// Profile
+
+
+let CurrentUser = JSON.parse(localStorage.getItem("currentUser"));
+let ProfileFname = document.getElementById("ProfileFname");
+let ProfileFnameMsg = document.querySelector("#ProfileFname + div");
+
+let ProfileLname = document.getElementById("ProfileLname");
+let ProfileLnameMsg = document.querySelector("#ProfileLname + div");
+
+let ProfileEmail = document.getElementById("ProfileEmail");
+
+let profilePhone = document.getElementById("profilePhone");
+let profilePhoneMsg = document.querySelector("#profilePhone + div");
+
+let profilePassword = document.getElementById("profilePassword");
+let profilePasswordMsg = document.querySelector("#profilePassword + div");
+
+let accountType = document.getElementById("accountType");
+
+let userForm = document.getElementById("userForm");
+
+
+if (ProfileFname) {
+  ProfileFname.value = CurrentUser.fName;
+  ProfileLname.value = CurrentUser.lName;
+  ProfileEmail.value = CurrentUser.email;
+  profilePhone.value = CurrentUser.phone;
+  profilePassword.value = CurrentUser.password;
+  accountType.value = CurrentUser.accountType;
+  console.log(CurrentUser);
+}
+
+if (ProfileFname != null) {
+  ProfileFname.oninput = () => {
+    IsValid(
+      ProfileFname,
+      ProfileFnameMsg,
+      nameRegex,
+      "Name length must be less than 40 character"
+    );
+  };
+}
+
+if (ProfileLname != null) {
+  ProfileLname.oninput = () => {
+    IsValid(
+      ProfileLname,
+      ProfileLnameMsg,
+      nameRegex,
+      "Name length must be less than 40 character"
+    );
+  };
+}
+
+if (profilePhone != null) {
+  profilePhone.oninput = () => {
+    IsValid(
+      profilePhone,
+      profilePhoneMsg,
+      phoneRegex,
+      "Enter an egyptian phone number"
+    );
+  };
+}
+
+if (profilePassword != null) {
+  profilePassword.oninput = () => {
+    IsValid(
+      profilePassword,
+      profilePasswordMsg,
+      passwordRegEx,
+      "The password must be at least 8 characters containg : At least one lowercase letter , one uppercase letter ,one digit"
+    );
+  };
+}
+
+if (userForm != null) {
+  userForm.onsubmit = (event) => {
+    event.preventDefault();
+    if (
+      IsValid(
+        ProfileLname,
+        ProfileLnameMsg,
+        nameRegex,
+        "Name length must be less than 40 character"
+      ) &&
+      IsValid(
+        ProfileLname,
+        ProfileLnameMsg,
+        nameRegex,
+        "Name length must be less than 40 character"
+      ) &&
+      IsValid(
+        profilePhone,
+        profilePhoneMsg,
+        phoneRegex,
+        "Enter an egyptian phone number"
+      ) &&
+      IsValid(
+        profilePassword,
+        profilePasswordMsg,
+        passwordRegEx,
+        "The password must be at least 8 characters containg : At least one lowercase letter , one uppercase letter ,one digit"
+      ) 
+    ) {
+      ShowToast();
+      UpdateUserDataToLocalStorage();
+    }
+  };
+}
+
+
+function UpdateUserDataToLocalStorage() {
+    let formData = new FormData(userForm);
+    
+    let user = {};
+    formData.forEach((value, key) => {
+      user[key] = value;
+    });
+  
+    user.email = ProfileEmail.value;
+    console.log(user);
+    console.log(users);
+
+
+    users.some(function (element) {
+      if (element.email == user.email) {
+
+        Object.keys(user).forEach(key => {
+          element[key] = user[key];
+        });
+
+        localStorage.setItem("currentUser" , JSON.stringify(user))
+        return true;
+      } 
+    });
+
+    localStorage.setItem("users", JSON.stringify(users));
+}
+
+let cancel = document.getElementById("cancel")
+
+if(cancel){
+  cancel.onclick = (event)=>{
+    window.location.reload();
+  }
+}
+
+let changePicBtn = document.getElementById('changePicBtn');
+let deletePicBtn = document.getElementById('deletePicBtn');
+let imageInput = document.getElementById('imageInput');
+let userImage = document.getElementById('userImage');
+
+
+if (changePicBtn) {
+  changePicBtn.addEventListener("click", () => {
+    imageInput.click(); 
+  });
+}
+
+
+if (imageInput) {
+  imageInput.addEventListener('change', (event) => {
+    let file = event.target.files[0];
+    if (file) {
+      let reader = new FileReader();
+      reader.onload = function(e) {
+        userImage.src = e.target.result;
+        localStorage.setItem("userImg" ,userImage.src )
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  
+}
+
+if (deletePicBtn) {
+
+deletePicBtn.addEventListener('click', () => {
+  userImage.src = '';
+});
+}
+
+// * ///////////////////////////////////// Orders History
+
+const orders = [
+  {
+    list: "Egyptian",
+    date: "2024-10-12",
+    price: "$50",
+    status: "Shipped",
+    orderNumber: "001",
+  },
+  {
+    list: "Italian",
+    date: "2024-10-13",
+    price: "$30",
+    status: "Shipped",
+    orderNumber: "002",
+  },
+  {
+    list: "Egyptian",
+    date: "2024-10-14",
+    price: "$20",
+    status: "Shipped",
+    orderNumber: "003",
+  },
+  {
+    list: "Korean",
+    date: "2024-10-15",
+    price: "$60",
+    status: "Shipped",
+    orderNumber: "004",
+  },
+];
+
+const table = document.getElementById("order-record-table");
+
+function loadOrders(filteredOrders = orders) {
+  table.innerHTML = ""; 
+
+  filteredOrders.forEach((order, index) => {
+    const row = document.createElement("div");
+    row.className =
+      "table-row d-flex justify-content-between align-items-center";
+    row.innerHTML = `
+      <span>${order.list}</span>
+      <span style="margin-left:-2rem;">${order.date}</span>
+      <span style="margin-left:-2rem;">${order.price}</span>
+      <span>${order.status}</span>
+      <span>${order.orderNumber}</span>
+    `;
+    table.appendChild(row);
+  });
+}
+
+function filterOrders() {
+  const searchTerm = document
+    .getElementById("search-bar")
+    .value.toLowerCase();
+  const filteredOrders = orders.filter((order) =>
+    order.list.toLowerCase().includes(searchTerm)
+  );
+  loadOrders(filteredOrders);
+}
+
+document.getElementById("search-bar").addEventListener("input", filterOrders);
+
+loadOrders();
+
 
 
 

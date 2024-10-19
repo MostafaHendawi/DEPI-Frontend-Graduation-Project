@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="shortcut icon" href="Assets/logo.png" type="image/x-icon">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg py-4">
+    <div class="container">
+
+      <a class="navbar-brand fs-1" href="home.html"><i class="fas fa-utensils"></i> Savory</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
+
+          <li class="nav-item dropdown ">
+            <a class="nav-link active dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Menus
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item " href="menu.html">Egyptian Menu</a></li>
+              <li><a class="dropdown-item " href="menu.html">Italian Menu</a></li>
+              <li>
+                <hr class="dropdown-divider ">
+              </li>
+              <li><a class="dropdown-item " href="menu.html">Japanese Menu</a></li>
+              <li><a class="dropdown-item " href="menu.html">Mexico Menu</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="recipes.html">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="stuff.html">Stuff</a>
+          </li>
+        </ul>
+
+        <div class="icons d-flex justify-content-between align-items-center gap-3">
+
+            
+         <a class="p-0" href="https://wa.me/201552924534" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <i class="fas fa-solid fa-bag-shopping cartIcon"></i>
+          <i class="fa-regular fa-sun"></i>
+
+          <a href="profile.html"> <img width="40px" height="40px" class="profile rounded-circle bg-white" src="Assets/image-avatar.png" alt=""></a>
+         
+        </div>
+
+      </div>
+    </div>
+  </nav>
+      
+  <div class="myCart" style="display: none;">
+    <h4>Cart</h4>
+    <div class="content d-flex flex-column gap-2">
+               
+    </div>
+</div>
+
+<div class="user-card">
+  <h2>Account</h2>
+  
+  <button class="test-btn"><a href="history.html" target="_blank">orders history</a> </button>
+
+    <div class="d-flex align-items-center mb-5 ">
+
+      <img width="120px" height="120px" class="profile "  src="Assets/image-avatar.png" alt="User Picture" class="user-image me-5" id="userImage">
+      <div class="d-flex flex-column ">
+        <button class="btn btn-action changpic ms-3" id="changePicBtn"><i class="fa-solid fa-user-pen"></i></button>
+        <button class="btn btn-action delpic  ms-3" id="deletePicBtn"><i class="fa-solid fa-user-xmark"></i></button>
+        <input type="file" id="imageInput" accept="image/*">
+      </div>
+
+    </div>
+
+  <form id="userForm">
+    <div class="row">
+      <!-- Left Column -->
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="ProfileFname" class="form-label">First Nmae</label>
+          <input type="text" name="fName" class="form-control" id="ProfileFname" style="border-radius: 20px;" >
+          <div class="">
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="ProfileLname" class="form-label">Last Nmae</label>
+          <input type="text" name="lName" class="form-control" id="ProfileLname" style="border-radius: 20px;" >
+          <div class="">
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="ProfileEmail" class="form-label">Email</label>
+          <input type="email" name="email" class="form-control" id="ProfileEmail" disabled style="border-radius: 20px;">
+        </div>
+        
+      </div>
+      
+      <!-- Right Column -->
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="profilePhone" class="form-label">Phone Number</label>
+          <input type="tel"  name="phone" class="form-control" id="profilePhone" style="border-radius: 20px;" placeholder="Enter phone number">
+          <div class="">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="profilePassword" class="form-label">Password</label>
+          <input type="text" name="password" class="form-control" id="profilePassword" style="border-radius: 20px;" placeholder="Enter password">
+          <div class="">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="accountType" class="form-label">Account Type</label>
+          <select class="form-control" id="accountType" name="accountType" style="border-radius: 20px;">
+            <option value="Basic">Basic</option>
+            <option value="Premium">Premium</option>
+            <option value="Admin">Admin</option>
+          </select>
+        </div>        
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="d-flex justify-content-end mt-4">
+      <button type="button" class="btn btn-secondary me-3" id="cancel">Cancel</button>
+      <button type="submit" class="btn text-white" id="saveChangesBtn" style="background-color: var(--main-color);">Save Changes</button>
+    </div>
+  </form>
+</div>
+
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="Assets/hi.png" class="rounded me-2" width="30" heigth="30" alt="welcome">
+      <strong class="me-auto">Savory</strong>
+      <small>1 second ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body text-white"  style="background-color: var(--main-color);">
+      Data Updated successfully.
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="JS/main.js"></script>
+</body>
+</html>

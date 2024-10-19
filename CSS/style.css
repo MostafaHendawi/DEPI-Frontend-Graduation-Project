@@ -1303,7 +1303,7 @@ margin-bottom: 4rem;
   color: var(--main-color);
   }
 
-  /* /////////////////////// */
+  /** /////////////////////// */
 
   .stuff{
     transition: .5s;
@@ -1311,4 +1311,170 @@ margin-bottom: 4rem;
 
   .stuff:hover{
     transform: translateY(-10px);
+  }
+
+
+  /*********************************************** Profile */
+  .user-card {
+    /* width: 60%; */
+    min-height:calc(100vh - 81px) ;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #F6F7F5;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+    position: relative;
+  }
+  .user-card h2 {
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--main-color);
+  }
+  .user-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+  }
+  .btn-action {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    
+  }
+  .changpic {
+    background-color: aliceblue; 
+    border-color: greenyellow; 
+    color: green;
+  }
+  .changpic:hover {
+    background-color: green;
+    color: blanchedalmond;
+  }
+  .delpic{
+    background-color: aliceblue; 
+    border-color: red; 
+    color: red;
+  }
+  .delpic:hover{
+    background-color: red;
+    color: antiquewhite;
+  }
+  .test-btn {
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+    background-color: lightgray;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .test-btn:hover {
+    background-color: darkgray;
+  }
+  .error-message {
+    color: red;
+    font-size: 0.9rem;
+    display: none;
+  }
+  #imageInput {
+    display: none;
+  }
+  .test-btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+  .order-record-card {
+    width: 70%;
+    margin: 40px auto;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .table-header {
+    background-color: #e3e7ec;
+    color: rgb(34, 33, 33);
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 800px;
+  }
+  .table-header span {
+    margin-left: 2rem;
+  }
+  .table-row {
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 800px;
+  }
+  .delete-icon {
+    cursor: pointer;
+    color: red;
+  }
+  #order-record-table {
+    margin-top: 1rem;
+  }
+  .table-scroll {
+    overflow-x: auto;
+  }
+  .search-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto;
+    width: 70%;
+  }
+  .search-bar {
+    flex: 1;
+    margin-right: 20px;
+  }
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  .user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 1rem;
+  }
+  .user-icons {
+    margin-left: 20px;
+  }
+  .user-icons i {
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: rgb(219, 213, 213);
+    padding: 1rem .5rem;
+    border-radius: 50%;
+  }
+
+  .table-header span,
+  .table-row span {
+    flex-grow: 2;
+    text-align: center; 
+    min-width: 0;
+  }
+  .table-header span:first-child,
+  .table-row span:first-child {
+    flex-grow: 1;
+  }
+
+  @media (max-width: 768px) {
+    .order-record-card {
+      width: 100%;
+    }
+    .search-bar-container {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 90%;
+    }
+    .user-info {
+      margin-top: 10px;
+    }
   }

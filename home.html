@@ -98,7 +98,8 @@
           <i class="fas fa-solid fa-bag-shopping cartIcon"></i>
           <i class="fa-regular fa-sun"></i>
 
-          <img src="Assets/image-avatar.png" width="40px" alt="">
+          <a href="profile.html"> <img width="40px" height="40px" class="profile rounded-circle bg-white" src="Assets/image-avatar.png" alt=""></a>
+         
         </div>
 
       </div>
@@ -749,6 +750,57 @@
         },
       },
     });
+//* ///////////////////////////////////////////////// Explore Menus
+
+let myImgs = Array.from(document.querySelectorAll(".item img"));
+let nextElement = document.querySelector("#nextElement");
+let previousElement = document.querySelector("#previousElement");
+let cardTitle = document.querySelectorAll(".imagesSlider h2");
+let cardText = document.querySelectorAll(".cardText");
+
+let arr = [4, 3, 2, 1, 0];
+let card4 = document.querySelector(".card4").innerHTML;
+let card3 = document.querySelector(".card3").innerHTML;
+let card2 = document.querySelector(".card2").innerHTML;
+let card1 = document.querySelector(".card1").innerHTML;
+let card0 = document.querySelector(".card0").innerHTML;
+
+nextElement.addEventListener("click", showNextElement);
+previousElement.addEventListener("click", showPreviousElement);
+
+// 4 3 2 1 0  cards in html
+// 2 1 0 4 3  imgs
+let paragraphs = [`${card4}`, `${card3}`, `${card2}`, `${card1}`, `${card0}`];
+let h4 = [ "Italian Menu","Chinese Menu","Korean menu", "Syrian Menu",  "Egyptian Menu"];
+
+function showNextElement() {
+  arr.push(arr.shift());
+  paragraphs.push(paragraphs.shift());
+  h4.unshift(h4.pop());
+
+  for (let index = 4; index >= 0; index--) {
+    myImgs[arr[index]].setAttribute("src", `./Assets/meal-${index}.jpg`);
+    cardText[index].innerHTML = paragraphs[index];
+    cardTitle[index].innerHTML = h4[index];
+  }
+}
+
+// 4 3 2 1 0  cards in html
+//  3 2 1 0 4 right
+//  left
+
+function showPreviousElement() {
+  arr.unshift(arr.pop());
+  paragraphs.unshift(paragraphs.pop());
+  h4.unshift(h4.pop());
+
+  for (let index = 4; index >= 0; index--) {
+    myImgs[arr[index]].setAttribute("src", `./Assets/meal-${index}.jpg`);
+    cardText[index].innerHTML = paragraphs[index];
+    cardTitle[index].innerHTML = h4[index];
+  }
+}
+
   </script>
   
 </body>
