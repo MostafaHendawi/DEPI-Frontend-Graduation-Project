@@ -779,3 +779,231 @@ if (table) {
 
 
 
+// ======================================MENU
+const cardsData = [
+  {
+    imgSrc: "./Assets/chefs-3.jpg",
+    title: "Italian Cuisine",
+    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, quasi.",
+    price: "$12.91",
+    category: "meat"
+  },
+  {
+    imgSrc: "./Assets/chefs-2.jpg",
+    title: "French Cuisine",
+    description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+    price: "$15.45",
+    category: "fish"
+  },
+  {
+    imgSrc: "./Assets/chefs-1.jpg",
+    title: "Japanese Cuisine",
+    description: "Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    price: "$18.99",
+    category: "plants"
+  },
+  {
+    imgSrc: "./Assets/chefs-3.jpg",
+    title: "Mexican Cuisine",
+    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+    price: "$10.50",
+    category: "meat"
+  },
+  ,
+  {
+    imgSrc: "./Assets/chefs-3.jpg",
+    title: "Mexican Cuisine",
+    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+    price: "$10.50",
+    category: "meat"
+  },
+  ,
+  {
+    imgSrc: "./Assets/chefs-3.jpg",
+    title: "Mexican Cuisine",
+    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+    price: "$10.50",
+    category: "meat"
+  },
+  ,
+  {
+    imgSrc: "./Assets/chefs-3.jpg",
+    title: "Mexican Cuisine",
+    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+    price: "$10.50",
+    category: "meat"
+  },
+  ,
+  {
+    imgSrc: "./Assets/chefs-3.jpg",
+    title: "Mexican Cuisine",
+    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+    price: "$10.50",
+    category: "meat"
+  },
+  {
+    imgSrc: "./Assets/chefs-1.jpg",
+    title: "Indian Cuisine",
+    description: "Laboris nisi ut aliquip ex ea commodo consequat.",
+    price: "$14.75",
+    category: "plants"
+  },
+  {
+    imgSrc: "./Assets/chefs-1.jpg",
+    title: "Indian Cuisine",
+    description: "Laboris nisi ut aliquip ex ea commodo consequat.",
+    price: "$14.75",
+    category: "plants"
+  },
+  {
+    imgSrc: "./Assets/chefs-1.jpg",
+    title: "Indian Cuisine",
+    description: "Laboris nisi ut aliquip ex ea commodo consequat.",
+    price: "$14.75",
+    category: "plants"
+  },
+  {
+    imgSrc: "./Assets/chefs-1.jpg",
+    title: "Indian Cuisine",
+    description: "Laboris nisi ut aliquip ex ea commodo consequat.",
+    price: "$14.75",
+    category: "plants"
+  },
+  {
+    imgSrc: "./Assets/chefs-1.jpg",
+    title: "Indian Cuisine",
+    description: "Laboris nisi ut aliquip ex ea commodo consequat.",
+    price: "$14.75",
+    category: "plants"
+  },
+  {
+    imgSrc: "./Assets/chefs-1.jpg",
+    title: "Indian Cuisine",
+    description: "Laboris nisi ut aliquip ex ea commodo consequat.",
+    price: "$14.75",
+    category: "plants"
+  },
+  {
+    imgSrc: "./Assets/chefs-2.jpg",
+    title: "Chinese Cuisine",
+    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+    price: "$13.50",
+    category: "fish"
+  }
+  ,
+  {
+    imgSrc: "./Assets/chefs-2.jpg",
+    title: "Chinese Cuisine",
+    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+    price: "$13.50",
+    category: "fish"
+  }
+  ,
+  {
+    imgSrc: "./Assets/chefs-2.jpg",
+    title: "Chinese Cuisine",
+    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+    price: "$13.50",
+    category: "fish"
+  }
+  ,
+  {
+    imgSrc: "./Assets/chefs-2.jpg",
+    title: "Chinese Cuisine",
+    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+    price: "$13.50",
+    category: "fish"
+  }
+  ,
+  {
+    imgSrc: "./Assets/chefs-2.jpg",
+    title: "Chinese Cuisine",
+    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+    price: "$13.50",
+    category: "fish"
+  }
+];
+
+let filteredCards = []; // Store the filtered cards here
+let currentCategory = 'all'; // Store current category for showAllCards function
+
+// Function to render limited number of cards dynamically
+function renderCards(cardsArray) {
+  const container = document.getElementById('cards-container');
+  const showMoreBtn = document.getElementById('show-more-btn');
+  container.innerHTML = ""; // Clear the container before rendering
+
+  const maxInitialCards = 4; // Max number of cards to show initially
+
+  // Display first 4 cards
+  const initialCards = cardsArray.slice(0, maxInitialCards);
+  initialCards.forEach(card => {
+    container.innerHTML += createCardHTML(card);
+  });
+
+  // Show "Show All" button only if there are more than 4 cards
+  if (cardsArray.length > maxInitialCards) {
+    showMoreBtn.style.display = "block";
+  } else {
+    showMoreBtn.style.display = "none";
+  }
+}
+
+// Function to create card HTML
+function createCardHTML(card) {
+  return `
+    <div class="col-md-6 col-xl-3 col-sm-6 g-3">
+      <div class="cards card3 recipe position-relative">
+        <img src="${card.imgSrc}" alt="${card.title}" class="w-50 rounded-circle ms-3 mt-3" />
+        <h5 class="ps-4 pt-4 pe-2">${card.title}</h5>
+        <p class="ps-4 pt-2 pe-2">${card.description}</p>
+        <div class="d-flex justify-content-between">
+          <b class="ps-4 pt-2">${card.price}</b>
+          <button class="btn btn-light me-3 mb-2 text-success">
+            <i class="fa-solid fa-plus"></i> Add
+          </button>
+        </div>
+        <div class="icon position-absolute top-0 end-0 m-3">
+          <i class="fa-regular fa-heart" onclick="toggleHeart(this)"></i>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// Function to filter cards by category
+function filterCards(category) {
+  currentCategory = category;
+  if (category === "all") {
+    filteredCards = cardsData;
+  } else {
+    filteredCards = cardsData.filter(card => card.category === category);
+  }
+  renderCards(filteredCards); // Show filtered cards
+}
+
+// Function to show all cards after clicking "Show All" button
+function showAllCards() {
+  const container = document.getElementById('cards-container');
+  container.innerHTML = ""; // Clear the container
+  filteredCards.forEach(card => {
+    container.innerHTML += createCardHTML(card); // Show all filtered cards
+  });
+  document.getElementById('show-more-btn').style.display = "none"; // Hide the button after clicking
+}
+// Function to search cards by title or description
+function searchCards() {
+  const searchInput = document.getElementById('search-input').value.toLowerCase();
+  const searchResults = cardsData.filter(card => {
+    const title = card.title.toLowerCase();
+    const description = card.description.toLowerCase();
+    return title.includes(searchInput) || description.includes(searchInput);
+  });
+
+  renderCards(searchResults); // Show search results
+}
+
+// Call the renderCards function on page load to show all cards initially
+window.onload = function() {
+  filterCards('all'); // Show all cards on initial load
+};

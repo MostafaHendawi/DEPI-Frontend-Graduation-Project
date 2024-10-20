@@ -1536,3 +1536,16 @@ hr {
     border: 0;
     border-top: 1px solid #d1d8dd;
 }
+.viewallput{
+  background-color: greenyellow;
+
+}
+.viewallput:hover{
+  background-color: rgb(109, 171, 17);
+
+}
+.text-whitee{
+  color: #230404;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
