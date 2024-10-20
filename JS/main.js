@@ -217,13 +217,15 @@ function ShowToast() {
   toastBootstrap.show();
 }
 
-function SaveUserDataToLocalStorage(registerForm) {
+function SaveUserDataToLocalStorage() {
   let formData = new FormData(registerForm);
   let user = {};
   formData.forEach((value, key) => {
     user[key] = value;
   });
 
+  console.log(user);
+  
   user.accountType = "Basic";
 
   users.push(user);
@@ -419,8 +421,11 @@ function addProduct(imgSrc, price, name, countValue, description) {
 }
 
 function del(productElement) {
-  productElement.remove();
-  updateLocalStorage();
+  if(productElement){
+    productElement.remove();
+    updateLocalStorage();
+  }
+
 }
 
 function updateLocalStorage() {
@@ -612,9 +617,6 @@ function UpdateUserDataToLocalStorage() {
     });
   
     user.email = ProfileEmail.value;
-    console.log(user);
-    console.log(users);
-
 
     users.some(function (element) {
       if (element.email == user.email) {
@@ -624,6 +626,7 @@ function UpdateUserDataToLocalStorage() {
         });
 
         localStorage.setItem("currentUser" , JSON.stringify(user))
+
         return true;
       } 
     });
@@ -662,6 +665,8 @@ if (imageInput) {
         localStorage.setItem("userImg" ,userImage.src )
       };
       reader.readAsDataURL(file);
+      window.location.reload();
+
     }
   });
 
@@ -671,7 +676,8 @@ if (imageInput) {
 if (deletePicBtn) {
 
 deletePicBtn.addEventListener('click', () => {
-  userImage.src = '';
+  localStorage.removeItem("userImg")
+  window.location.reload();
 });
 }
 
@@ -738,10 +744,27 @@ function filterOrders() {
   loadOrders(filteredOrders);
 }
 
-document.getElementById("search-bar").addEventListener("input", filterOrders);
+let searchBar = document.getElementById("search-bar")
+if (searchBar) {
+  
+  searchBar.addEventListener("input", filterOrders);
+}
 
-loadOrders();
+if (table) {
+  
+  loadOrders();
+}
 
+
+
+// *********************************** order
+
+// let offcanvasBody = document.getElementsByClassName("offcanvas-body")[0];
+// let ordersToPayfor = document.getElementsByClassName("orders")[0];
+
+// let CartContent = localStorage.getItem("products")
+
+// ordersToPayfor.innerHTML = CartContent
 
 
 
