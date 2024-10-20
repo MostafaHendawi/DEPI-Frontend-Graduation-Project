@@ -398,7 +398,6 @@ function addProduct(imgSrc, price, name, countValue, description) {
             <p>${price} x <span class="count">${countValue}</span></p>
         </div>
         <i class="trash fa-solid fa-trash-can"></i>
-        <a href="order.html?count=${countValue}&imgSrc=${imgSrc}&price=${price}&name=${name}&description=${description}" class="btn btn-danger">Checkout</a>
 
         <hr>
     `;
@@ -440,6 +439,18 @@ function updateLocalStorage() {
   }
 }
 
+
+let trashIcons = document.querySelectorAll(".trash");
+
+for (let i = 0; i < trashIcons.length; i++) {
+
+  trashIcons[i].addEventListener("click", function () {
+    trashIcons[i].parentNode.remove();
+    localStorage.setItem("products" , cartContent.innerHTML)
+  });
+}
+
+
 //* ////////////////////////////////////////// Add to favourite
 
 let favourite = document.querySelectorAll(".fa-heart:not(.nav)");
@@ -480,7 +491,7 @@ window.onload = loadFavorites;
 
 //* ////////////////////////////////////////// recipe details
 
-let recipes = document.querySelectorAll(".recipe");
+let recipes = document.querySelectorAll(".recipe img");
 
 recipes.forEach((element) => {
   element.ondblclick = (event) => {

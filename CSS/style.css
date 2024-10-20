@@ -1517,8 +1517,16 @@ input[type="text"] {
     border-radius: 6px;
 }
 
-.badge {
+.countTopay {
     font-size: 12px;
+    border-radius: 50%;
+    padding: 4px;
+    color:white;
+}
+
+.payCard{
+  min-height: calc(100vh - 140px);
+
 }
 
 hr {
