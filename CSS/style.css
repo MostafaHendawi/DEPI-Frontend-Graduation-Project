@@ -249,6 +249,9 @@ nav {
   text-align: center;
   margin-top: 70px;
 }
+.card-cat a img{
+  border-radius: 50%;
+}
 
 /* ************************* Featured Recipes ************************** */  
 .featureresioes .card {
