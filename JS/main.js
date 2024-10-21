@@ -782,146 +782,106 @@ if (table) {
 // ======================================MENU
 const cardsData = [
   {
-    imgSrc: "./Assets/chefs-3.jpg",
-    title: "Italian Cuisine",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, quasi.",
+    imgSrc: "./Assets/egyptianrecipe5.png",
+    title: "Kushari",
+    description: "A beloved Egyptian comfort dish featuring a hearty medley of rice, macaroni, lentils, and chickpeas, topped with a tangy tomato sauce and crispy fried onions",
     price: "$12.91",
     category: "meat"
   },
   {
-    imgSrc: "./Assets/chefs-2.jpg",
-    title: "French Cuisine",
-    description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+    imgSrc: "./Assets/egypian recipe6.png",
+    title: "Kebda Eskandrany",
+    description: "Sautéed chicken livers seasoned with garlic, coriander, and a splash of lemon juice, a beloved street food from Alexandria.",
     price: "$15.45",
-    category: "fish"
+    category: "meat"
   },
   {
-    imgSrc: "./Assets/chefs-1.jpg",
-    title: "Japanese Cuisine",
-    description: "Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    imgSrc: "./Assets/egyptian recipe10.png",
+    title: "Siadia",
+    description: "Tender fish served over a bed of fragrant rice, simmered in a delicious tomato sauce.",
     price: "$18.99",
-    category: "plants"
-  },
-  {
-    imgSrc: "./Assets/chefs-3.jpg",
-    title: "Mexican Cuisine",
-    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-    price: "$10.50",
-    category: "meat"
-  },
-  ,
-  {
-    imgSrc: "./Assets/chefs-3.jpg",
-    title: "Mexican Cuisine",
-    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-    price: "$10.50",
-    category: "meat"
-  },
-  ,
-  {
-    imgSrc: "./Assets/chefs-3.jpg",
-    title: "Mexican Cuisine",
-    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-    price: "$10.50",
-    category: "meat"
-  },
-  ,
-  {
-    imgSrc: "./Assets/chefs-3.jpg",
-    title: "Mexican Cuisine",
-    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-    price: "$10.50",
-    category: "meat"
-  },
-  ,
-  {
-    imgSrc: "./Assets/chefs-3.jpg",
-    title: "Mexican Cuisine",
-    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-    price: "$10.50",
-    category: "meat"
-  },
-  {
-    imgSrc: "./Assets/chefs-1.jpg",
-    title: "Indian Cuisine",
-    description: "Laboris nisi ut aliquip ex ea commodo consequat.",
-    price: "$14.75",
-    category: "plants"
-  },
-  {
-    imgSrc: "./Assets/chefs-1.jpg",
-    title: "Indian Cuisine",
-    description: "Laboris nisi ut aliquip ex ea commodo consequat.",
-    price: "$14.75",
-    category: "plants"
-  },
-  {
-    imgSrc: "./Assets/chefs-1.jpg",
-    title: "Indian Cuisine",
-    description: "Laboris nisi ut aliquip ex ea commodo consequat.",
-    price: "$14.75",
-    category: "plants"
-  },
-  {
-    imgSrc: "./Assets/chefs-1.jpg",
-    title: "Indian Cuisine",
-    description: "Laboris nisi ut aliquip ex ea commodo consequat.",
-    price: "$14.75",
-    category: "plants"
-  },
-  {
-    imgSrc: "./Assets/chefs-1.jpg",
-    title: "Indian Cuisine",
-    description: "Laboris nisi ut aliquip ex ea commodo consequat.",
-    price: "$14.75",
-    category: "plants"
-  },
-  {
-    imgSrc: "./Assets/chefs-1.jpg",
-    title: "Indian Cuisine",
-    description: "Laboris nisi ut aliquip ex ea commodo consequat.",
-    price: "$14.75",
-    category: "plants"
-  },
-  {
-    imgSrc: "./Assets/chefs-2.jpg",
-    title: "Chinese Cuisine",
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
-    price: "$13.50",
     category: "fish"
+  },
+  {
+    imgSrc: "./Assets/japanrecipe2.png",
+    title: "Sushi Platter",
+    description: "A variety of sushi including fresh tuna, salmon, shrimp, and rolls, served with soy sauce and wasabi.",
+    price: "$18.99",
+    category: "fish"
+  },
+  {
+    imgSrc: "./Assets/japan recipe3.png",
+    title: "Ramen",
+    description: "Traditional Japanese noodle soup with a rich broth, slices of pork, a boiled egg, and bamboo shoots",
+    price: "$18.99",
+    category: "fish"
+  },
+  {
+    imgSrc: "./Assets/japanrecip5.png",
+    title: "Sashimi",
+    description: "Fresh, thin slices of raw fish including tuna, salmon, and yellowtail, served with soy sauce and wasabi.",
+    price: "$18.99",
+    category: "fish"
+  },
+  {
+    imgSrc: "./Assets/egptian recipe8.png",
+    title: "Mombarr",
+    description: "Stuffed zucchini boats filled with a savory rice and minced meat mixture, a classic Egyptian specialty",
+    price: "$10.50",
+    category: "meat"
   }
   ,
   {
-    imgSrc: "./Assets/chefs-2.jpg",
-    title: "Chinese Cuisine",
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
-    price: "$13.50",
-    category: "fish"
+    imgSrc: "./Assets/japan recipe6.png",
+    title: "Tempura",
+    description: "Crispy, light batter-fried shrimp and vegetables, served with a dipping sauce and grated radish",
+    price: "$10.50",
+    category: "meat"
   }
   ,
   {
-    imgSrc: "./Assets/chefs-2.jpg",
-    title: "Chinese Cuisine",
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
-    price: "$13.50",
-    category: "fish"
+    imgSrc: "./Assets/japanrecipe4.png",
+    title: "Katsu Curry",
+    description: "Crispy breaded pork cutlet served with a flavorful Japanese curry sauce and steamed rice",
+    price: "$10.50",
+    category: "meat"
   }
   ,
   {
-    imgSrc: "./Assets/chefs-2.jpg",
-    title: "Chinese Cuisine",
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
-    price: "$13.50",
-    category: "fish"
-  }
-  ,
+    imgSrc: "./Assets/egypian recipe2.png",
+    title: "Molokhia",
+    description: "A rich and aromatic stew made with the tender, green leaves of the molokhia plant, cooked with chicken or meat, and served over white rice",
+    price: "$14.75",
+    category: "plants"
+  },
   {
-    imgSrc: "./Assets/chefs-2.jpg",
-    title: "Chinese Cuisine",
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
-    price: "$13.50",
-    category: "fish"
-  }
+    imgSrc: "./Assets/egyptian recipe4.png",
+    title: "Fool Masry",
+    description: "A classic Egyptian dish of slow-cooked fava beans in a flavorful broth, garnished with chopped onions, parsley, and a drizzle of olive oil.",
+    price: "$14.75",
+    category: "plants"
+  },
+  {
+    imgSrc: "./Assets/egyptian recipe 1.png",
+    title: "Feteer Meshalteet",
+    description: "A flaky, layered pastry filled with a sweet cheese mixture, often topped with honey or powdered sugar, a traditional Egyptian delicacy.",
+    price: "$14.75",
+    category: "plants"
+  },
+  {
+    imgSrc: "./Assets/egyptian recipe3.png",
+    title: "Falafel Platter",
+    description: "Crisp, golden-brown falafel balls served with fresh pita, creamy tahini sauce, and a vibrant salad - a classic Middle Eastern delicacy.",
+    price: "$14.75",
+    category: "plants"
+  },
+  {
+    imgSrc: "./Assets/japan recipe1.png",
+    title: "Yakisoba",
+    description: "Stir-fried noodles with vegetables, pork, and a savory sauce, topped with seaweed and pickled ginger",
+    price: "$14.75",
+    category: "plants"
+  },
 ];
 
 let filteredCards = []; // Store the filtered cards here
