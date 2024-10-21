@@ -924,7 +924,7 @@ margin-bottom: 4rem;
     border-radius: 20px;
   }
   .recipes .card1 {
-    background-color: #ffe9f8;
+    background-color: #e9f4ff;
   }
   .recipes .card2 {
     background-color: #e9ffff;
@@ -1224,8 +1224,8 @@ margin-bottom: 4rem;
     margin-bottom:.5rem;
   }
   .news-item img {
-    width: 100px;
-    height: 70px;
+    width: 120px;
+    height: 80px;
     border-radius: 10px;
     margin-right: 15px;
   }
@@ -1234,20 +1234,20 @@ margin-bottom: 4rem;
   }
   .news-title {
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   .news-description {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: #555;
   }
   .news-date {
     padding: 10px;
     border-radius: 20px;
     background-color: #F6F7F5;
-    font-size: 0.8rem;
+    font-size: 1.4rem;
     color: var(--main-color)
   }
   .news-separator {
@@ -1263,8 +1263,8 @@ margin-bottom: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background-color: #ededed;
     text-decoration: none;
@@ -1274,7 +1274,7 @@ margin-bottom: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: .25rem;
+  margin-bottom: .80rem;
   }
   
   .social-row div {
@@ -1290,12 +1290,13 @@ margin-bottom: 4rem;
   }
   
   .follow-btn {
-  background-color: var(--main-color);
+
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 10px 30px;
   border-radius: 20px;
   margin-right: 1rem;
+  font-size: 20px;
   }
   .welcomclass{
     
