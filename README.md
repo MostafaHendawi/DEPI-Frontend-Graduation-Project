@@ -1,2 +1,2 @@
 # DEPI-Frontend-Graduation-Project
-Restaurant Management System
+Restaurant Management System.
