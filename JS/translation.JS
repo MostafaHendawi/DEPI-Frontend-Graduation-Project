@@ -1,4 +1,4 @@
-let currentTheme = 'dark';
+let currentTheme = 'light';
 let currentLanguage = 'en';
 const translations = {
     en: {
@@ -395,4 +395,5 @@ function toggleTheme() {
     currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute("data-bs-theme", currentTheme);
     document.getElementById("theme-icon").className = currentTheme === 'dark' ? 'fas fa-sun': 'fas fa-moon'  ;
+    document.getElementById("home").classList.toggle("bg-dark");
 }
