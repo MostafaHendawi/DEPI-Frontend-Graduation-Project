@@ -1,5 +1,5 @@
 # DEPI-Frontend-Graduation-Project
-Website for Savory restaurant.
+Website for a restaurant.
 
 Savory is a software solution designed to optimize the daily operations of a restaurant. It helps restaurant owners efficiently handle tasks such as order taking, table reservations, menu management and billing.
 
@@ -29,6 +29,8 @@ Savory is a software solution designed to optimize the daily operations of a res
 
 <img width="923" alt="image" src="https://github.com/user-attachments/assets/b12292f9-49bb-4482-b6c9-12ba443ab528">
 
+4. Ordering a recipe
+  
 <img width="950" alt="image" src="https://github.com/user-attachments/assets/c69d06fc-c625-42f2-834f-a7feddaefa74">
 
 <img width="942" alt="image" src="https://github.com/user-attachments/assets/4ea2f35b-164b-4b91-946a-bbc702aeb657">
