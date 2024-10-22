@@ -41,6 +41,70 @@ Savory is a software solution designed to optimize the daily operations of a res
 
 <img width="952" alt="image" src="https://github.com/user-attachments/assets/53781c71-83b8-495e-8025-7451b645c6b9">
 
+4. Menus :
+
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/dbf1c34b-3398-4347-b3d9-1604d1db79e5">
+
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/87b3e79f-4faa-4f4c-90d6-bb0485b961f9">
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/c02a3d81-9f23-4a1c-8493-a65dd87fd84f">
+
+<img width="958" alt="image" src="https://github.com/user-attachments/assets/114dcfbf-d5d6-406f-ad9c-e507a18e6d59">
+
+5. Contact us :
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/171bd521-b43c-45fe-982f-f6ac1b50b6fd">
+
+6. About us :
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/fe8d826a-2207-44f4-8fb4-ae7058b79986">
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/8e77820a-ad8c-4bdb-8492-388a38058c59">
+
+7. Services :
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/1bdba422-1d50-43b9-aabc-0d4bb5b46082">
+
+8. Stuff :
+
+<img width="946" alt="image" src="https://github.com/user-attachments/assets/1afe60d8-67db-49e1-a95e-badb97401c11">
+
+9. Profile :
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/da4a28a4-38cf-4911-acac-437461b9a2af">
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/5ec7a4bc-4bb1-44e5-a4cc-5d6b651fcaed">
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/25295d12-71ba-423a-b9d1-ce24d06bd071">
+
+10. Orders history :
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/a890b91a-c472-4ccb-888d-9aac6f33d405">
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/e6b64483-053b-47ed-a860-667e9ff0e0a8">
+
+10. Language
+
+<img width="945" alt="image" src="https://github.com/user-attachments/assets/76a5cb3f-c7ca-4dac-931c-d6dced4e8e7a">
+
+11. Theme
+
+<img width="958" alt="image" src="https://github.com/user-attachments/assets/2c4d4ecf-afd5-48fb-b443-698a555a3e08">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
