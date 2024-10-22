@@ -31,7 +31,8 @@ let phoneRegex = /^(01)[0-2|5]{1}[0-9]{8}$/;
 
 let password = document.getElementById("password");
 let passwordMsg = document.querySelector("#password + div");
-let passwordRegEx = /(?=.[a-z])(?=.[A-Z])(?=.*[0-9])(?=.{8,})/;
+let passwordRegEx = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
+
 
 let Cpassword = document.getElementById("Cpassword");
 let CpasswordMsg = document.querySelector("#Cpassword + div");
