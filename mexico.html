@@ -34,44 +34,61 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
 
           <li class="nav-item dropdown ">
-            <a class="nav-link active dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+            <a id="navMenu" class="nav-link active dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Menus
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item " href="egyptmenu.html">Egyptian Menu</a></li>
-              <li><a class="dropdown-item " href="italianmenu.html">Italian Menu</a></li>
+              <li><a id="navMenu1" class="dropdown-item " href="egyptmenu.html">Egyptian Menu</a></li>
+              <li><a id="navMenu2" class="dropdown-item " href="italianmenu.html">Italian Menu</a></li>
               <li>
                 <hr class="dropdown-divider ">
               </li>
-              <li><a class="dropdown-item " href="japanese.html">Japanese Menu</a></li>
-              <li><a class="dropdown-item " href="mexico.html">Mexico Menu</a></li>
+              <li><a id="navMenu3" class="dropdown-item " href="japanese.html">Japanese Menu</a></li>
+              <li><a id="navMenu4" class="dropdown-item " href="mexico.html">Mexico Menu</a></li>
             </ul>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="recipes.html">Recipes</a>
+            <a id="navRecipes" class="nav-link " aria-current="page" href="recipes.html">Recipes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a id="navContact" class="nav-link" href="contact.html">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
+            <a id="navAbout" class="nav-link" href="about.html">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="services.html">Services</a>
+            <a id="navServices" class="nav-link" href="services.html">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="stuff.html">Stuff</a>
+            <a id="navAboutStuff" class="nav-link" href="stuff.html">Stuff</a>
           </li>
         </ul>
-
+        
         <div class="icons d-flex justify-content-between align-items-center gap-3">
 
             
          <a class="p-0" href="https://wa.me/201552924534" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
           <i class="fas fa-solid fa-bag-shopping cartIcon"></i>
-          <i class="fa-regular fa-sun"></i>
+          <div class="btn-group">
+            <button type="button" class="btn " onclick="toggleTheme()">
+                <i id="theme-icon" class="fas fa-sun"></i>
+            </button>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <i id="lang-icon" class="fas fa-globe"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+                <li>
+                    <a class="dropdown-item" href="#" onclick="setLanguage('en')">En</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#" onclick="setLanguage('ar')">Ar</i></a>
+                </li>
+            </ul>
+        </div>
 
           <a href="profile.html"> <img width="40px" height="40px" class="profile rounded-circle bg-white" src="Assets/image-avatar.png" alt=""></a>
          
@@ -80,12 +97,15 @@
       </div>
     </div>
   </nav>
-  <div class="myCart" style="display: none;">
-    <h4>Cart</h4>
+  
+  <div class="myCart " style="display: none;">
+      <h4>Cart <a href="order.html" class="text-danger"><i class="fa-solid fa-reply-all fa-flip"></i></a></h4>
+      
     <div class="content d-flex flex-column gap-2">
                
     </div>
 </div>
+
 
   <!-------------------------- Menus-------------------------->
   

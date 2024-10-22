@@ -14,167 +14,145 @@
 </head>
 
 <body style="background-color: #f5f5f5; font-family: 'Righteous', sans-serif;">
-    <nav class="navbar navbar-expand-lg py-4">
-        <div class="container">
-    
-          <a class="navbar-brand fs-1" href="home.html"><i class="fas fa-utensils"></i> Savory</a>
-    
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-    
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
-    
-              <li class="nav-item dropdown ">
-                <a class="nav-link active dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Menus
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item " href="menu.html">Egyptian Menu</a></li>
-                  <li><a class="dropdown-item " href="menu.html">Italian Menu</a></li>
-                  <li>
-                    <hr class="dropdown-divider ">
-                  </li>
-                  <li><a class="dropdown-item " href="menu.html">Japanese Menu</a></li>
-                  <li><a class="dropdown-item " href="menu.html">Mexico Menu</a></li>
-                </ul>
+  <nav class="navbar navbar-expand-lg py-4">
+    <div class="container">
+
+      <a class="navbar-brand fs-1" href="home.html"><i class="fas fa-utensils"></i> Savory</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
+
+          <li class="nav-item dropdown ">
+            <a id="navMenu" class="nav-link active dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Menus
+            </a>
+            <ul class="dropdown-menu">
+              <li><a id="navMenu1" class="dropdown-item " href="egyptmenu.html">Egyptian Menu</a></li>
+              <li><a id="navMenu2" class="dropdown-item " href="italianmenu.html">Italian Menu</a></li>
+              <li>
+                <hr class="dropdown-divider ">
               </li>
-    
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="recipes.html">Recipes</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="stuff.html">Stuff</a>
-              </li>
+              <li><a id="navMenu3" class="dropdown-item " href="japanese.html">Japanese Menu</a></li>
+              <li><a id="navMenu4" class="dropdown-item " href="mexico.html">Mexico Menu</a></li>
             </ul>
-    
-            <div class="icons d-flex justify-content-between align-items-center gap-3">
-    
-                
-             <a class="p-0" href="https://wa.me/201552924534" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-              <i class="fas fa-solid fa-bag-shopping cartIcon"></i>
-              <i class="fa-regular fa-sun"></i>
-    
-              <img src="Assets/image-avatar.png" width="40px" alt="">
-            </div>
-    
-          </div>
+          </li>
+
+          <li class="nav-item">
+            <a id="navRecipes" class="nav-link " aria-current="page" href="recipes.html">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a id="navContact" class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a id="navAbout" class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a id="navServices" class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a id="navAboutStuff" class="nav-link" href="stuff.html">Stuff</a>
+          </li>
+        </ul>
+        
+        <div class="icons d-flex justify-content-between align-items-center gap-3">
+
+            
+         <a class="p-0" href="https://wa.me/201552924534" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <i class="fas fa-solid fa-bag-shopping cartIcon"></i>
+          <div class="btn-group">
+            <button type="button" class="btn " onclick="toggleTheme()">
+                <i id="theme-icon" class="fas fa-sun"></i>
+            </button>
         </div>
-      </nav>
-    
-      <div class="myCart" style="display: none;">
-        <h4>Cart</h4>
-        <div class="content d-flex flex-column gap-2">
-                   
+        <div class="btn-group">
+            <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <i id="lang-icon" class="fas fa-globe"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+                <li>
+                    <a class="dropdown-item" href="#" onclick="setLanguage('en')">En</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#" onclick="setLanguage('ar')">Ar</i></a>
+                </li>
+            </ul>
         </div>
+
+          <a href="profile.html"> <img width="40px" height="40px" class="profile rounded-circle bg-white" src="Assets/image-avatar.png" alt=""></a>
+         
+        </div>
+
+      </div>
     </div>
+  </nav>
+  
+  <div class="myCart " style="display: none;">
+      <h4>Cart <a href="order.html" class="text-danger"><i class="fa-solid fa-reply-all fa-flip"></i></a></h4>
+      
+    <div class="content d-flex flex-column gap-2">
+               
+    </div>
+</div>
+
   <div class="card-container">
     <div class="custom-card">
+
       <div class="row align-items-stretch">
+        
         <div class="col-md-6">
           <div class="image-container">
             <img src="Assets/chef 2.jpg" alt="Main Image" class="main-image">
           </div>
         </div>
+
         <div class="col-md-6">
           <div class="right-column-content">
-            <h2 class="service-text">We Are More Than Multiple Services</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h2 class="service-text mb-4">We Are More Than Multiple Services</h2>
+            <p class="mb-4 pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="row">
               <div class="col-md-6">
                 <div class="icon-wrapper">
-                  <i class="icon fa-solid fa-mobile-screen fa-lg" style="color: #74C0FC;"></i> 
+                  <i class="icon fa-solid fa-mobile-screen fa-lg" style="color: var(--main-color)"></i> 
                   <span class="icon-text">Online Order</span>
                 </div>
                 <div class="icon-wrapper">
-                  <i class="icon fa-solid fa-business-time fa-lg" style="color: #74C0FC;"></i> 
+                  <i class="icon fa-solid fa-business-time fa-lg" style="color: var(--main-color);"></i> 
                   <span class="icon-text">24/7 Service</span>
                 </div>
                 <div class="icon-wrapper">
-                  <i class="icon fa-solid fa-hand-sparkles fa-lg" style="color: #74C0FC;"></i> 
+                  <i class="icon fa-solid fa-hand-sparkles fa-lg" style="color: var(--main-color);"></i> 
                   <span class="icon-text">Clean Kitchen</span>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="icon-wrapper">
-                  <i class="fa-solid icon fa-book fa-lg" style="color: #74C0FC;"></i> 
+                  <i class="fa-solid icon fa-book fa-lg" style="color: var(--main-color);"></i> 
                   <span class="icon-text">Pre-Reservation</span>
                 </div>
                 <div class="icon-wrapper">
-                  <i class="fa-solid icon fa-basket-shopping fa-lg" style="color: #74C0FC;"></i> 
+                  <i class="fa-solid icon fa-basket-shopping fa-lg" style="color: var(--main-color);"></i> 
                   <span class="icon-text">Organized Foodie Place</span>
                 </div>
                 <div class="icon-wrapper">
-                  <i class="fa-solid icon fa-chess-queen fa-lg" style="color: #74C0FC;"></i>
+                  <i class="fa-solid icon fa-chess-queen fa-lg" style="color: var(--main-color);"></i>
                   <span class="icon-text">Super Chefs</span>
                 </div>
               </div>
             </div>
-            <button class="btn more-btn">About Us</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="footer ">
-    <div class="container">
-      <div class="row align-items-center g-3 g-md-0">
 
-        <div class="col-md-3 d-flex flex-column gap-3">
-          <img class="logo " src="./Assets/footer-logo.png" alt="">
-          <p id="footerP">We deliver fresh, sustainable ingredients from local farms, making it easy for you to enjoy delicious,
-            wholesome meals every day.</p>
-          <div class="social-icons2">
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-pinterest"></i></a>
-            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-          </div>
-        </div>
 
-        <div class="col-md-2 links d-flex flex-column gap-3">
-          <h4 id="footerH4">Our Links</h4>
-          <a id="footerlink1" href="#home">Home</a>
-          <a id="footerlink2" href="#about">About Us</a>
-          <a id="footerlink3" href="#menu">Our Menu</a>
-        </div>
-
-        <div class="Contact col-md-3 contact-info d-flex flex-column gap-3">
-          <h4 id="footerContact" >Contact Us</h4>
-          <p><a href="tel:+15558358705"><i class="fa-solid fa-phone-volume"></i> +1 555 8358705</a></p>
-          <p><a href="mailto:kenzi.lawson@example.com"><i class="fa-regular fa-envelope"></i> kenzi.lawson@example.com</a></p>
-          <p ><i class="fa-solid fa-location-dot"></i> 2642 Royal Ln. Mesa, New Jersey 64563</p>
-        </div>
-
-        <div class="col-md-4 subscribe d-flex flex-column gap-3">
-          <h4 id="footerSub">Subscribe</h4>
-          <form>
-            <input type="email" placeholder="Email Address">
-            <button id="button1" type="submit">send</button>
-          </form>
-          <p id="footerTime"> Saturday - Sunday \ 7:00AM - 2:00PM</p>
-        </div>
-
-        <br class="linee">
-
-        <div id="footerCopyRighy" class=" col-12 copyright ">
-          &copy; 2024 craetive team project Limited. All Rights Reserved.
-        </div>
-
-      </div>
-    </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./JS/main.js"></script>
 </body>
 </html>

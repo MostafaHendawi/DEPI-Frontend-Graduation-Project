@@ -237,7 +237,7 @@ nav {
   width: 200px;
 }
 .card-cat img:hover {
-  width: 160px;
+  /* width: 160px; */
 }
 .card-text {
   margin-top: 10px;
@@ -258,14 +258,14 @@ nav {
 }
 
 /* ************************* Featured Recipes ************************** */
-.featureresioes .card {
+.featureresioes .container2 .card {
   position: relative;
   transition: box-shadow 0.3s ease-in-out;
   overflow: hidden;
   margin: 15px;
 }
 
-.featureresioes .card:hover {
+.featureresioes .container2 .card:hover {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   transform: scale(1.01);
   transition: transform 0.3s ease-in-out;
@@ -280,7 +280,7 @@ nav {
   font-size: 16px;
   transform: rotate(-45deg);
 }
-.featureresioes .btn-action {
+.featureresioes .container2 .btn-action {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -290,28 +290,29 @@ nav {
   padding: 8px;
   cursor: pointer;
   color: black;
-  display: none;
+  /* display: none; */
+
 }
-.featureresioes .card:hover .btn-action {
+.featureresioes .container2 .card:hover .btn-action {
   display: block;
 }
 
-.featureresioes .btn-action i {
+.featureresioes .container2 .btn-action i {
   font-size: 24px;
 }
-.featureresioes .btn-action i:hover {
+.featureresioes .container2 .btn-action i:hover {
   color: red;
 }
-.featureresioes .heart-active i {
+.featureresioes .container2 .heart-active i {
   color: red; /* Change heart color to red when active */
 }
-.featureresioes .header-container {
+.featureresioes  .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.featureresioes .icon-buttons {
+.featureresioes  .icon-buttons {
   display: flex;
   gap: 10px; /* Space between the buttons */
 }
@@ -325,10 +326,10 @@ nav {
   color: gray;
   border-color: black;
 }
-.featureresioes .fa-circle-chevron-left:hover {
+.featureresioes  .fa-circle-chevron-left:hover {
   color: green;
 }
-.featureresioes .fa-circle-chevron-right {
+.featureresioes  .fa-circle-chevron-right {
   font-size: 2.5em;
   color: gray;
 }
@@ -407,9 +408,7 @@ nav {
 
 /* ************************* Home -> Explore Menus ************************** */
 
-.exploreMenus {
-  /* padding: 0px; */
-}
+
 .exploreMenus .cardscolor .card {
   background-color: #6a9530;
   border: 0;
@@ -1312,8 +1311,8 @@ ul li {
   border-radius: 20px;
 }
 .btn-action {
-  margin-bottom: 1.5rem;
-  width: 100%;
+  /* margin-bottom: 1.5rem; */
+  /* width: 100%; */
 }
 .changpic {
   background-color: aliceblue;
@@ -1422,7 +1421,7 @@ ul li {
   margin-left: 10px;
   cursor: pointer;
   background-color: rgb(219, 213, 213);
-  padding: 1rem 0.5rem;
+  /* padding: 1rem 0.5rem; */
   border-radius: 50%;
 }
 
@@ -1519,16 +1518,21 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 20px;
+  min-height: calc(100vh - 81px) ;
+  background-color: #F6F7F5;
+
 }
 .custom-card {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  width: 100%;
-  max-width: 1200px;
+  width: 70%;
+  min-height: calc(100vh - 140px) ;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .image-container {
   position: relative;
@@ -1557,6 +1561,7 @@ hr {
   margin-bottom: 15px;
 }
 .icon {
+
   font-size: 24px;
   margin-right: 10px;
   background-color: #ffffff;
@@ -1564,7 +1569,13 @@ hr {
   border-radius: 50%;
   padding: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .more-btn {
   margin-top: 20px;
   align-self: flex-start;
